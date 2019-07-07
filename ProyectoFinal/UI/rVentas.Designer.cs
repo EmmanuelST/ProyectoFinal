@@ -245,6 +245,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Controls.Add(this.button5);
@@ -353,7 +355,7 @@
             // 
             this.button8.Image = global::ProyectoFinal.Properties.Resources.eliminar;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button8.Location = new System.Drawing.Point(352, 520);
+            this.button8.Location = new System.Drawing.Point(359, 494);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 57);
             this.button8.TabIndex = 17;
@@ -365,7 +367,7 @@
             // 
             this.button9.Image = global::ProyectoFinal.Properties.Resources.guardar;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button9.Location = new System.Drawing.Point(251, 520);
+            this.button9.Location = new System.Drawing.Point(258, 494);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 56);
             this.button9.TabIndex = 16;
@@ -377,7 +379,7 @@
             // 
             this.button10.Image = global::ProyectoFinal.Properties.Resources.nuevo;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button10.Location = new System.Drawing.Point(152, 520);
+            this.button10.Location = new System.Drawing.Point(159, 494);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 56);
             this.button10.TabIndex = 15;
@@ -389,7 +391,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(383, 470);
+            this.label10.Location = new System.Drawing.Point(361, 229);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 17);
             this.label10.TabIndex = 18;
@@ -398,7 +400,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox4.Location = new System.Drawing.Point(433, 467);
+            this.textBox4.Location = new System.Drawing.Point(411, 226);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(164, 23);
@@ -436,9 +438,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 591);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label10);
+            this.ClientSize = new System.Drawing.Size(615, 562);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
