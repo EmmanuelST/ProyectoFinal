@@ -66,6 +66,12 @@
     <Compile Include="UI\rCompras.Designer.cs">
       <DependentUpon>rCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\rPesador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\rPesador.Designer.cs">
+      <DependentUpon>rPesador.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\rSuplidor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\rCompras.resx">
       <DependentUpon>rCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\rPesador.resx">
+      <DependentUpon>rPesador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\rSuplidor.resx">
       <DependentUpon>rSuplidor.cs</DependentUpon>
