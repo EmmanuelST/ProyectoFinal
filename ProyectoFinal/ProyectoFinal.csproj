@@ -54,40 +54,46 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\rCliente.cs">
+    <Compile Include="UI\Consultas\cClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rCliente.Designer.cs">
+    <Compile Include="UI\Consultas\cClientes.Designer.cs">
+      <DependentUpon>cClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rCliente.Designer.cs">
       <DependentUpon>rCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\rCompras.cs">
+    <Compile Include="UI\Registros\rCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rCompras.Designer.cs">
+    <Compile Include="UI\Registros\rCompras.Designer.cs">
       <DependentUpon>rCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\rPesador.cs">
+    <Compile Include="UI\Registros\rPesador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rPesador.Designer.cs">
+    <Compile Include="UI\Registros\rPesador.Designer.cs">
       <DependentUpon>rPesador.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\rSuplidor.cs">
+    <Compile Include="UI\Registros\rSuplidor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rSuplidor.Designer.cs">
+    <Compile Include="UI\Registros\rSuplidor.Designer.cs">
       <DependentUpon>rSuplidor.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\rUsuario.cs">
+    <Compile Include="UI\Registros\rUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rUsuario.Designer.cs">
+    <Compile Include="UI\Registros\rUsuario.Designer.cs">
       <DependentUpon>rUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\rVentas.cs">
+    <Compile Include="UI\Registros\rVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rVentas.Designer.cs">
+    <Compile Include="UI\Registros\rVentas.Designer.cs">
       <DependentUpon>rVentas.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -100,22 +106,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\rCliente.resx">
+    <EmbeddedResource Include="UI\Consultas\cClientes.resx">
+      <DependentUpon>cClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rCliente.resx">
       <DependentUpon>rCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\rCompras.resx">
+    <EmbeddedResource Include="UI\Registros\rCompras.resx">
       <DependentUpon>rCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\rPesador.resx">
+    <EmbeddedResource Include="UI\Registros\rPesador.resx">
       <DependentUpon>rPesador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\rSuplidor.resx">
+    <EmbeddedResource Include="UI\Registros\rSuplidor.resx">
       <DependentUpon>rSuplidor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\rUsuario.resx">
+    <EmbeddedResource Include="UI\Registros\rUsuario.resx">
       <DependentUpon>rUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\rVentas.resx">
+    <EmbeddedResource Include="UI\Registros\rVentas.resx">
       <DependentUpon>rVentas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
