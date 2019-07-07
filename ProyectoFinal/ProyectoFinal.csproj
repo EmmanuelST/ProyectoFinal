@@ -66,6 +66,12 @@
     <Compile Include="UI\rUsuario.Designer.cs">
       <DependentUpon>rUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\rVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\rVentas.Designer.cs">
+      <DependentUpon>rVentas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\rUsuario.resx">
       <DependentUpon>rUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\rVentas.resx">
+      <DependentUpon>rVentas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\remover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
