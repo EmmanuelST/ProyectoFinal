@@ -78,6 +78,12 @@
     <Compile Include="UI\Registros\rPesador.Designer.cs">
       <DependentUpon>rPesador.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rProductos.Designer.cs">
+      <DependentUpon>rProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rSuplidor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rPesador.resx">
       <DependentUpon>rPesador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rProductos.resx">
+      <DependentUpon>rProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rSuplidor.resx">
       <DependentUpon>rSuplidor.cs</DependentUpon>
