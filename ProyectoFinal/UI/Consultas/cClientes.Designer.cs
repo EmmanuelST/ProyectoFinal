@@ -36,8 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,21 +118,21 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Criterio:";
             // 
-            // textBox1
+            // textBox12
             // 
-            this.textBox1.Location = new System.Drawing.Point(520, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBox12.Location = new System.Drawing.Point(520, 25);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(208, 20);
+            this.textBox12.TabIndex = 8;
             // 
-            // button1
+            // Buscarbutton
             // 
-            this.button1.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.button1.Location = new System.Drawing.Point(734, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 23);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
+            this.Buscarbutton.Location = new System.Drawing.Point(734, 22);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(46, 23);
+            this.Buscarbutton.TabIndex = 9;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -184,8 +184,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Buscarbutton);
+            this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
@@ -212,8 +212,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

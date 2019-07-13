@@ -181,6 +181,7 @@
             this.Buscarbutton.Size = new System.Drawing.Size(46, 23);
             this.Buscarbutton.TabIndex = 20;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // cUsuarios
             // 
