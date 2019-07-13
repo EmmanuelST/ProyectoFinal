@@ -60,6 +60,12 @@
     <Compile Include="UI\Consultas\cClientes.Designer.cs">
       <DependentUpon>cClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\cUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cUsuarios.Designer.cs">
+      <DependentUpon>cUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rCliente.cs">
       <SubType>Form</SubType>
     </Compile>

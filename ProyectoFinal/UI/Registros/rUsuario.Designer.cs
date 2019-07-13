@@ -42,14 +42,19 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 9);
+            this.label1.Location = new System.Drawing.Point(85, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 24);
             this.label1.TabIndex = 0;
@@ -135,7 +140,7 @@
             // 
             this.button2.Image = global::ProyectoFinal.Properties.Resources.nuevo;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(42, 216);
+            this.button2.Location = new System.Drawing.Point(47, 284);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 56);
             this.button2.TabIndex = 10;
@@ -148,7 +153,7 @@
             // 
             this.button3.Image = global::ProyectoFinal.Properties.Resources.guardar;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(137, 216);
+            this.button3.Location = new System.Drawing.Point(142, 284);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 56);
             this.button3.TabIndex = 11;
@@ -160,7 +165,7 @@
             // 
             this.button4.Image = global::ProyectoFinal.Properties.Resources.eliminar;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(235, 216);
+            this.button4.Location = new System.Drawing.Point(240, 284);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 57);
             this.button4.TabIndex = 12;
@@ -168,11 +173,49 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(106, 237);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(223, 20);
+            this.numericUpDown2.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 237);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Nivel de Usuario:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 206);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Fecha de Creacion:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(119, 205);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(210, 20);
+            this.dateTimePicker1.TabIndex = 16;
+            // 
             // rUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 284);
+            this.ClientSize = new System.Drawing.Size(362, 349);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -190,6 +233,7 @@
             this.Name = "rUsuario";
             this.Text = "Registro de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +254,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
