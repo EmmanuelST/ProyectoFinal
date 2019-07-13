@@ -193,5 +193,15 @@
   <ItemGroup>
     <None Include="Resources\lista.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{B42ED2EB-B6CD-44F8-9DA6-F69819CC0967}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{2018F1E8-9F89-448C-B9E1-FBE5E596A41D}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

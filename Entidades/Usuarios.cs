@@ -24,7 +24,7 @@ namespace Entidades
             Usuario = string.Empty;
             Clave = string.Empty;
             FechaRegistro = DateTime.Now;
-            NivelUsuario = 5;
+            NivelUsuario = 0;
         }
     }
 }
