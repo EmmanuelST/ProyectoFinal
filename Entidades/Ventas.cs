@@ -17,6 +17,7 @@ namespace Entidades
         public int TipoVeta { get; set; }
         public decimal TasaInteres { get; set; }
         public DateTime HastaFecha { get; set; }
+        public virtual List<VentaDetalles>Detalles { get; set; }
 
         public Ventas()
         {
@@ -29,6 +30,7 @@ namespace Entidades
             TipoVeta = 0;
             TasaInteres = 0;
             HastaFecha = DateTime.Now;
+            Detalles = new List<VentaDetalles>();
         }
     }
 }
