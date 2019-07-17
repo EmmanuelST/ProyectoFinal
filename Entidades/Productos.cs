@@ -6,13 +6,22 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+
+    public enum UnidadesMedidas : int
+    {
+        Nada = 0,
+        Libras = 1,
+        Litros = 2,
+        Sacos = 3,
+        Fanegas = 4
+    }
     public class Productos
     {
 
         public int IdProductos { get; set; }
         public string Descripcion { get; set; } 
         public decimal Existencia { get; set; }
-        public string UnidadMedida { get; set; }
+        public UnidadesMedidas UnidadMedida { get; set; }
         public decimal Costo { get; set; }
         public decimal Precio { get; set; }
         public string Observacion { get; set; }
@@ -24,7 +33,7 @@ namespace Entidades
             IdProductos = 0;
             Descripcion = string.Empty;
             Existencia = 0;
-            UnidadMedida = string.Empty;
+            UnidadMedida = UnidadesMedidas.Nada;
             Costo = 0;
             Precio = 0;
             Observacion = string.Empty;
