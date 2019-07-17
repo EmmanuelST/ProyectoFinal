@@ -54,6 +54,7 @@
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registrosToolStripMenuItem.Text = "&Registros";
+            this.registrosToolStripMenuItem.Click += new System.EventHandler(this.RegistrosToolStripMenuItem_Click);
             // 
             // registrarUsuariosToolStripMenuItem
             // 
@@ -73,7 +74,7 @@
             // consultarUsuariosToolStripMenuItem
             // 
             this.consultarUsuariosToolStripMenuItem.Name = "consultarUsuariosToolStripMenuItem";
-            this.consultarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.consultarUsuariosToolStripMenuItem.Text = "Consultar &Usuarios";
             this.consultarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.ConsultarUsuariosToolStripMenuItem_Click);
             // 

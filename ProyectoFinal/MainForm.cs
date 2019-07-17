@@ -1,5 +1,6 @@
 ﻿using ProyectoFinal.UI;
 using ProyectoFinal.UI.Consultas;
+using ProyectoFinal.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,14 @@ namespace ProyectoFinal
         public MainForm()
         {
             InitializeComponent();
+            Login login = new Login();
+            login.ShowDialog();
+           
+        }
+
+        private void limitador()
+        {
+            registrarUsuariosToolStripMenuItem.Enabled = false;
         }
 
         private void RegistrarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -31,6 +40,11 @@ namespace ProyectoFinal
             cUsuarios consulta = new cUsuarios();
             consulta.MdiParent = this;
             consulta.Show();
+        }
+
+        private void RegistrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
