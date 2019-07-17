@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Personas
     {
-        public int IdPersona { get; set; }
+        //public int IdPersona { get; set; }
         public string Nombre { get; set; }
         public string Cedula { get; set; }
         public DateTime FechaNacimiento { get; set; }
@@ -20,7 +20,7 @@ namespace Entidades
 
         public Personas()
         {
-            IdPersona = 0;
+            //IdPersona = 0;
             Nombre = string.Empty;
             Cedula = string.Empty;
             FechaNacimiento = DateTime.Now;
