@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoFinal.UI
+namespace ProyectoFinal.UI.Registros
 {
-    public partial class rCompras : Form
+    public partial class rEntradaProducto : Form
     {
-        public rCompras()
+        public rEntradaProducto()
         {
             InitializeComponent();
         }
-
-        
     }
 }

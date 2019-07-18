@@ -18,8 +18,8 @@ namespace ProyectoFinal
         public MainForm()
         {
             InitializeComponent();
-            Login login = new Login();
-            login.ShowDialog();
+            /*Login login = new Login();
+            login.ShowDialog();*/
            
         }
 

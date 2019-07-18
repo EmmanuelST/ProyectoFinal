@@ -181,9 +181,9 @@
             // 
             // NivelnumericUpDown
             // 
-            this.NivelnumericUpDown.Location = new System.Drawing.Point(106, 237);
+            this.NivelnumericUpDown.Location = new System.Drawing.Point(119, 237);
             this.NivelnumericUpDown.Name = "NivelnumericUpDown";
-            this.NivelnumericUpDown.Size = new System.Drawing.Size(223, 20);
+            this.NivelnumericUpDown.Size = new System.Drawing.Size(210, 20);
             this.NivelnumericUpDown.TabIndex = 14;
             // 
             // label6

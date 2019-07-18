@@ -100,6 +100,12 @@
     <Compile Include="UI\Registros\rCompras.Designer.cs">
       <DependentUpon>rCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rEntradaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rEntradaProducto.Designer.cs">
+      <DependentUpon>rEntradaProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rPesador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rCompras.resx">
       <DependentUpon>rCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rEntradaProducto.resx">
+      <DependentUpon>rEntradaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rPesador.resx">
       <DependentUpon>rPesador.cs</DependentUpon>
@@ -236,6 +245,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listaTyni.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
