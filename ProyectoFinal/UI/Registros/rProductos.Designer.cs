@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rProductos));
             this.label2 = new System.Windows.Forms.Label();
             this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,16 +41,18 @@
             this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ObservaciontextBox = new System.Windows.Forms.TextBox();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
             this.UnidadMedidacomboBox = new System.Windows.Forms.ComboBox();
             this.ExistenciatextBox = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -82,7 +86,6 @@
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(192, 20);
             this.DescripciontextBox.TabIndex = 4;
-            this.DescripciontextBox.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // label4
             // 
@@ -92,7 +95,6 @@
             this.label4.Size = new System.Drawing.Size(100, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Unidad de Medida: ";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // CostonumericUpDown
             // 
@@ -146,66 +148,74 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Observaciones:";
             // 
-            // textBox4
+            // ObservaciontextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(9, 220);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(302, 81);
-            this.textBox4.TabIndex = 16;
-            this.textBox4.TextChanged += new System.EventHandler(this.TextBox4_TextChanged);
+            this.ObservaciontextBox.Location = new System.Drawing.Point(9, 220);
+            this.ObservaciontextBox.Multiline = true;
+            this.ObservaciontextBox.Name = "ObservaciontextBox";
+            this.ObservaciontextBox.Size = new System.Drawing.Size(302, 81);
+            this.ObservaciontextBox.TabIndex = 16;
             // 
-            // button1
+            // Buscarbutton
             // 
-            this.button1.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(231, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Buscarbutton.Location = new System.Drawing.Point(231, 14);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Buscarbutton.TabIndex = 17;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // button4
+            // Eliminarbutton
             // 
-            this.button4.Image = global::ProyectoFinal.Properties.Resources.eliminar;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(225, 318);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 60);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "Eliminar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Image = global::ProyectoFinal.Properties.Resources.eliminar;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Eliminarbutton.Location = new System.Drawing.Point(225, 318);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 60);
+            this.Eliminarbutton.TabIndex = 23;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
-            // button3
+            // Guardarbutton
             // 
-            this.button3.Image = global::ProyectoFinal.Properties.Resources.guardar;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(119, 318);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 60);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Guardar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Image = global::ProyectoFinal.Properties.Resources.guardar;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Guardarbutton.Location = new System.Drawing.Point(119, 318);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(75, 60);
+            this.Guardarbutton.TabIndex = 22;
+            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
-            // button2
+            // Nuevobutton
             // 
-            this.button2.Image = global::ProyectoFinal.Properties.Resources.nuevo;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(16, 318);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 60);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Nuevo";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Image = global::ProyectoFinal.Properties.Resources.nuevo;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(16, 318);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(75, 60);
+            this.Nuevobutton.TabIndex = 21;
+            this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // UnidadMedidacomboBox
             // 
             this.UnidadMedidacomboBox.FormattingEnabled = true;
+            this.UnidadMedidacomboBox.Items.AddRange(new object[] {
+            "Nada",
+            "Libras",
+            "Sacos",
+            "Fanegas"});
             this.UnidadMedidacomboBox.Location = new System.Drawing.Point(114, 77);
             this.UnidadMedidacomboBox.Name = "UnidadMedidacomboBox";
             this.UnidadMedidacomboBox.Size = new System.Drawing.Size(192, 21);
@@ -219,6 +229,11 @@
             this.ExistenciatextBox.Size = new System.Drawing.Size(192, 20);
             this.ExistenciatextBox.TabIndex = 25;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
+            // 
             // rProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,11 +241,11 @@
             this.ClientSize = new System.Drawing.Size(320, 389);
             this.Controls.Add(this.ExistenciatextBox);
             this.Controls.Add(this.UnidadMedidacomboBox);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Eliminarbutton);
+            this.Controls.Add(this.Guardarbutton);
+            this.Controls.Add(this.Nuevobutton);
+            this.Controls.Add(this.Buscarbutton);
+            this.Controls.Add(this.ObservaciontextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.PrecionumericUpDown);
@@ -247,6 +262,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostonumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,12 +280,13 @@
         private System.Windows.Forms.NumericUpDown PrecionumericUpDown;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox ObservaciontextBox;
+        private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.Button Guardarbutton;
+        private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.ComboBox UnidadMedidacomboBox;
         private System.Windows.Forms.TextBox ExistenciatextBox;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

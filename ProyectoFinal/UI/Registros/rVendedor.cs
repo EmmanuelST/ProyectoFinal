@@ -12,14 +12,12 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.UI.Registros
 {
-    public partial class rProductos : Form
+    public partial class rVendedor : Form
     {
-        public rProductos()
+        public rVendedor()
         {
             InitializeComponent();
         }
-
-        
 
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
@@ -29,29 +27,30 @@ namespace ProyectoFinal.UI.Registros
         private void Limpiar()
         {
             IdnumericUpDown.Value = 0;
-            DescripciontextBox.Text = string.Empty;
-            UnidadMedidacomboBox.SelectedIndex = 1;
-            CostonumericUpDown.Value = 0;
-            PrecionumericUpDown.Value = 0;
-            ExistenciatextBox.Text = "0";
-            ObservaciontextBox.Text = string.Empty;
+            NombretextBox.Text = string.Empty;
+            CedulatextBox.Text = string.Empty;
+            DirecciontextBox.Text = string.Empty;
+            TelefonotextBox.Text = string.Empty;
+            CelulartextBox.Text = string.Empty;
+            FechaRegistrodateTimePicker.Value = DateTime.Now;
+            FechaNacimientodateTimePicker.Value = DateTime.Now;
+
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-
             if (!Validar())
                 return;
 
-            RepositorioBase<Productos> db = new RepositorioBase<Productos>();
-            Productos producto = LlenarClase();
+            Vendedores vendedor = LlenarClase();
+            RepositorioBase<Vendedores> db = new RepositorioBase<Vendedores>();
 
             try
             {
 
                 if (IdnumericUpDown.Value == 0)
                 {
-                    if (db.Guardar(producto))
+                    if (db.Guardar(vendedor))
                     {
                         MessageBox.Show("Guardado Existosamente", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
@@ -63,7 +62,7 @@ namespace ProyectoFinal.UI.Registros
                 }
                 else
                 {
-                    if (db.Modificar(producto))
+                    if (db.Modificar(vendedor))
                     {
                         MessageBox.Show("Modificado Existosamente", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
@@ -83,26 +82,21 @@ namespace ProyectoFinal.UI.Registros
             }
         }
 
-        private Productos LlenarClase()
+        private Vendedores LlenarClase()
         {
-            Productos producto = new Productos();
-            try
-            {
-               
-                producto.IdProductos = (int)IdnumericUpDown.Value;
-                producto.Descripcion = DescripciontextBox.Text;
-                producto.UnidadMedida = (UnidadesMedidas)UnidadMedidacomboBox.SelectedIndex;
-                producto.Costo = CostonumericUpDown.Value;
-                producto.Precio = PrecionumericUpDown.Value;
-                producto.Existencia = decimal.Parse(ExistenciatextBox.Text);
-                producto.Observacion = ObservaciontextBox.Text;
+            Vendedores vendedor = new Vendedores();
 
-            }
-            catch(Exception)
-            {
+            vendedor.IdVendedor = (int)IdnumericUpDown.Value;
+            vendedor.Nombre = NombretextBox.Text;
+            vendedor.Cedula = CedulatextBox.Text;
+            vendedor.Direccion = DirecciontextBox.Text;
+            vendedor.Telefono = TelefonotextBox.Text;
+            vendedor.Celular = CelulartextBox.Text;
+            vendedor.FechaCreacion = FechaRegistrodateTimePicker.Value;
+            vendedor.FechaNacimiento = FechaNacimientodateTimePicker.Value;
 
-            }
-            return producto;
+
+            return vendedor;
         }
 
         private bool Validar()
@@ -110,23 +104,48 @@ namespace ProyectoFinal.UI.Registros
             bool paso = true;
             errorProvider.Clear();
 
-            if(string.IsNullOrWhiteSpace(DescripciontextBox.Text))
+            if (string.IsNullOrWhiteSpace(NombretextBox.Text))
             {
                 paso = false;
-                errorProvider.SetError(DescripciontextBox,"Este campo no puede estar vacio");
+                errorProvider.SetError(NombretextBox, "Este campo no puede estar vacio");
             }
 
-            if(CostonumericUpDown.Value == 0)
+            if (string.IsNullOrWhiteSpace(CedulatextBox.Text))
             {
                 paso = false;
-                errorProvider.SetError(CostonumericUpDown,"Este campo no puede ser cero");
+                errorProvider.SetError(CedulatextBox, "Este campo no puede estar vacio");
             }
 
-            if(PrecionumericUpDown.Value <= CostonumericUpDown.Value)
+            if (string.IsNullOrWhiteSpace(DirecciontextBox.Text))
             {
                 paso = false;
-                errorProvider.SetError(PrecionumericUpDown,"El precio no puede ser igual o menos que el costo");
+                errorProvider.SetError(DirecciontextBox, "Este campo no puede estar vacio");
             }
+
+            if (string.IsNullOrWhiteSpace(TelefonotextBox.Text))
+            {
+                paso = false;
+                errorProvider.SetError(TelefonotextBox, "Este campo no puede estar vacio");
+            }
+
+            if (string.IsNullOrWhiteSpace(CelulartextBox.Text))
+            {
+                paso = false;
+                errorProvider.SetError(CelulartextBox, "Este campo no puede estar vacio");
+            }
+
+            if (FechaRegistrodateTimePicker.Value > DateTime.Now)
+            {
+                paso = false;
+                errorProvider.SetError(FechaRegistrodateTimePicker, "La fecha no puede ser mayor que la de hoy");
+            }
+
+            if (FechaNacimientodateTimePicker.Value > DateTime.Now)
+            {
+                paso = false;
+                errorProvider.SetError(FechaNacimientodateTimePicker, "La fecha no puede ser mayor que la de hoy");
+            }
+
 
 
             return paso;
@@ -134,7 +153,7 @@ namespace ProyectoFinal.UI.Registros
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Productos> db = new RepositorioBase<Productos>();
+            RepositorioBase<Vendedores> db = new RepositorioBase<Vendedores>();
             errorProvider.Clear();
             try
             {
@@ -166,19 +185,19 @@ namespace ProyectoFinal.UI.Registros
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Productos> db = new RepositorioBase<Productos>();
-            Productos producto;
+            RepositorioBase<Vendedores> db = new RepositorioBase<Vendedores>();
+            Vendedores vendedores;
 
             try
             {
 
-                if ((producto = db.Buscar((int)IdnumericUpDown.Value)) is null)
+                if ((vendedores = db.Buscar((int)IdnumericUpDown.Value)) is null)
                 {
                     MessageBox.Show("No se pudo encontrar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    LlenarCampos(producto);
+                    LlenarCampos(vendedores);
 
                 }
 
@@ -190,16 +209,19 @@ namespace ProyectoFinal.UI.Registros
             }
         }
 
-        private void LlenarCampos(Productos producto)
+        private void LlenarCampos(Vendedores vendedor)
         {
+            Limpiar();
 
-            IdnumericUpDown.Value = producto.IdProductos;
-            DescripciontextBox.Text = producto.Descripcion;
-            UnidadMedidacomboBox.SelectedIndex = (int)producto.UnidadMedida;
-            CostonumericUpDown.Value = producto.Costo;
-            PrecionumericUpDown.Value = producto.Precio;
-            ExistenciatextBox.Text = producto.Existencia.ToString();
-            ObservaciontextBox.Text = producto.Observacion;
+            IdnumericUpDown.Value = vendedor.IdVendedor;
+            NombretextBox.Text = vendedor.Nombre;
+            CedulatextBox.Text = vendedor.Cedula;
+            DirecciontextBox.Text = vendedor.Direccion;
+            TelefonotextBox.Text = vendedor.Telefono;
+            CelulartextBox.Text = vendedor.Celular;
+            FechaRegistrodateTimePicker.Value = vendedor.FechaCreacion;
+            FechaNacimientodateTimePicker.Value = vendedor.FechaNacimiento;
+
         }
     }
 }
