@@ -31,9 +31,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarPesadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@
             // 
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarUsuariosToolStripMenuItem,
-            this.registrarClientesToolStripMenuItem});
+            this.registrarClientesToolStripMenuItem,
+            this.registrarPesadoresToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registrosToolStripMenuItem.Text = "&Registros";
@@ -64,6 +66,13 @@
             this.registrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registrarUsuariosToolStripMenuItem.Text = "Registrar &Usuarios";
             this.registrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.RegistrarUsuariosToolStripMenuItem_Click);
+            // 
+            // registrarClientesToolStripMenuItem
+            // 
+            this.registrarClientesToolStripMenuItem.Name = "registrarClientesToolStripMenuItem";
+            this.registrarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarClientesToolStripMenuItem.Text = "Registrar &Clientes";
+            this.registrarClientesToolStripMenuItem.Click += new System.EventHandler(this.RegistrarClientesToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -80,12 +89,12 @@
             this.consultarUsuariosToolStripMenuItem.Text = "Consultar &Usuarios";
             this.consultarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.ConsultarUsuariosToolStripMenuItem_Click);
             // 
-            // registrarClientesToolStripMenuItem
+            // registrarPesadoresToolStripMenuItem
             // 
-            this.registrarClientesToolStripMenuItem.Name = "registrarClientesToolStripMenuItem";
-            this.registrarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.registrarClientesToolStripMenuItem.Text = "Registrar &Clientes";
-            this.registrarClientesToolStripMenuItem.Click += new System.EventHandler(this.RegistrarClientesToolStripMenuItem_Click);
+            this.registrarPesadoresToolStripMenuItem.Name = "registrarPesadoresToolStripMenuItem";
+            this.registrarPesadoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarPesadoresToolStripMenuItem.Text = "Registrar &Pesadores";
+            this.registrarPesadoresToolStripMenuItem.Click += new System.EventHandler(this.RegistrarPesadoresToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -113,6 +122,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarPesadoresToolStripMenuItem;
     }
 }
 

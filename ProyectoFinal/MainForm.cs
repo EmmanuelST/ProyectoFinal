@@ -53,5 +53,12 @@ namespace ProyectoFinal
             registro.MdiParent = this;
             registro.Show();
         }
+
+        private void RegistrarPesadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rPesador registro = new rPesador();
+            registro.MdiParent = this;
+            registro.Show();
+        }
     }
 }

@@ -104,7 +104,14 @@ namespace ProyectoFinal.UI
                 errorProvider.SetError(FechadateTimePicker,"La fecha no puede ser mayor que la de hoy");
             }
 
-            if(LimiteCreditonumericUpDown.Value == 0)
+            if (FechaNacimientodateTimePicker.Value > DateTime.Now)
+            {
+                paso = false;
+                errorProvider.SetError(FechadateTimePicker, "La fecha no puede ser mayor que la de hoy");
+            }
+
+
+            if (LimiteCreditonumericUpDown.Value == 0)
             {
                 paso = false;
                 errorProvider.SetError(LimiteCreditonumericUpDown,"Debe fijar un limite de credito");
@@ -131,6 +138,7 @@ namespace ProyectoFinal.UI
             cliente.Telefono =  TelefonotextBox.Text;
             cliente.Celular =  CelulartextBox.Text;
             cliente.FechaCreacion =  FechadateTimePicker.Value;
+            cliente.FechaNacimiento = FechaNacimientodateTimePicker.Value;
             cliente.LimiteCredito = LimiteCreditonumericUpDown.Value ;
             cliente.LimiteVenta =  LimiteVentasnumericUpDown.Value;
             //cliente.Balance =  BalancetextBox.Text;
@@ -152,6 +160,7 @@ namespace ProyectoFinal.UI
             TelefonotextBox.Text = string.Empty;
             CelulartextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
+            FechaNacimientodateTimePicker.Value = DateTime.Now;
             LimiteCreditonumericUpDown.Value = 0;
             LimiteVentasnumericUpDown.Value = 0;
             BalancetextBox.Text = "0.0";
@@ -226,6 +235,7 @@ namespace ProyectoFinal.UI
             TelefonotextBox.Text = cliente.Telefono;
             CelulartextBox.Text = cliente.Celular;
             FechadateTimePicker.Value = cliente.FechaCreacion;
+            FechaNacimientodateTimePicker.Value = cliente.FechaNacimiento;
             LimiteCreditonumericUpDown.Value = cliente.LimiteCredito;
             LimiteVentasnumericUpDown.Value = cliente.LimiteVenta;
             BalancetextBox.Text = cliente.Balance.ToString();

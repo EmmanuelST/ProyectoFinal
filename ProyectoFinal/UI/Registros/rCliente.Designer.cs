@@ -57,6 +57,8 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.FechaNacimientodateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -164,6 +166,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.FechaNacimientodateTimePicker);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Buscarbutton);
             this.groupBox1.Controls.Add(this.FechadateTimePicker);
             this.groupBox1.Controls.Add(this.label8);
@@ -181,7 +185,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(327, 274);
+            this.groupBox1.Size = new System.Drawing.Size(327, 303);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
@@ -203,9 +207,9 @@
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(114, 235);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(122, 235);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(192, 20);
+            this.FechadateTimePicker.Size = new System.Drawing.Size(184, 20);
             this.FechadateTimePicker.TabIndex = 14;
             // 
             // label8
@@ -225,7 +229,7 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.LimiteCreditonumericUpDown);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Location = new System.Drawing.Point(12, 289);
+            this.groupBox2.Location = new System.Drawing.Point(12, 318);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(327, 119);
             this.groupBox2.TabIndex = 14;
@@ -288,7 +292,7 @@
             // 
             this.Guardarbutton.Image = global::ProyectoFinal.Properties.Resources.guardar;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(137, 429);
+            this.Guardarbutton.Location = new System.Drawing.Point(137, 458);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 60);
             this.Guardarbutton.TabIndex = 16;
@@ -301,7 +305,7 @@
             // 
             this.Eliminarbutton.Image = global::ProyectoFinal.Properties.Resources.eliminar;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(243, 429);
+            this.Eliminarbutton.Location = new System.Drawing.Point(243, 458);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 60);
             this.Eliminarbutton.TabIndex = 17;
@@ -314,7 +318,7 @@
             // 
             this.Nuevobutton.Image = global::ProyectoFinal.Properties.Resources.nuevo;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(34, 429);
+            this.Nuevobutton.Location = new System.Drawing.Point(34, 458);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 60);
             this.Nuevobutton.TabIndex = 15;
@@ -328,11 +332,29 @@
             this.errorProvider.ContainerControl = this;
             this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
             // 
+            // FechaNacimientodateTimePicker
+            // 
+            this.FechaNacimientodateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechaNacimientodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaNacimientodateTimePicker.Location = new System.Drawing.Point(122, 264);
+            this.FechaNacimientodateTimePicker.Name = "FechaNacimientodateTimePicker";
+            this.FechaNacimientodateTimePicker.Size = new System.Drawing.Size(184, 20);
+            this.FechaNacimientodateTimePicker.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 267);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Fecha de Nacimiento:";
+            // 
             // rCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 505);
+            this.ClientSize = new System.Drawing.Size(355, 536);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -381,5 +403,7 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.DateTimePicker FechaNacimientodateTimePicker;
+        private System.Windows.Forms.Label label1;
     }
 }
