@@ -182,6 +182,7 @@
             this.button1.Text = "Imprirmir";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            
             // 
             // Buscarbutton
             // 

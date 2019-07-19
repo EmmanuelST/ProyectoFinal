@@ -43,9 +43,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.Buscarbutton = new System.Windows.Forms.Button();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -189,15 +189,18 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Desde:";
             // 
-            // Buscarbutton
+            // groupBox1
             // 
-            this.Buscarbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.Buscarbutton.Location = new System.Drawing.Point(670, 29);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(46, 23);
-            this.Buscarbutton.TabIndex = 20;
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.DesdedateTimePicker);
+            this.groupBox1.Controls.Add(this.HastadateTimePicker);
+            this.groupBox1.Controls.Add(this.FechacheckBox);
+            this.groupBox1.Location = new System.Drawing.Point(14, -2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(213, 73);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
             // 
             // Imprimirbutton
             // 
@@ -211,19 +214,17 @@
             this.Imprimirbutton.Text = "Imprirmir";
             this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
-            // groupBox1
+            // Buscarbutton
             // 
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.DesdedateTimePicker);
-            this.groupBox1.Controls.Add(this.HastadateTimePicker);
-            this.groupBox1.Controls.Add(this.FechacheckBox);
-            this.groupBox1.Location = new System.Drawing.Point(14, -2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(213, 73);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
+            this.Buscarbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
+            this.Buscarbutton.Location = new System.Drawing.Point(670, 29);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(46, 23);
+            this.Buscarbutton.TabIndex = 20;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // cUsuarios
             // 

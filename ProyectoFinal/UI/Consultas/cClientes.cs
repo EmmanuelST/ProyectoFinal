@@ -16,5 +16,7 @@ namespace ProyectoFinal.UI.Consultas
         {
             InitializeComponent();
         }
+
+       
     }
 }

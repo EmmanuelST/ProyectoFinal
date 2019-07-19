@@ -14,9 +14,11 @@ namespace ProyectoFinal.UI.Consultas
 {
     public partial class cUsuarios : Form
     {
+        private List<Usuarios> listado;
         public cUsuarios()
         {
             InitializeComponent();
+            listado = new List<Usuarios>();
             Buscar();
         }
 
@@ -27,7 +29,7 @@ namespace ProyectoFinal.UI.Consultas
 
         private void Buscar()
         {
-            var listado = new List<Usuarios>();
+            listado = new List<Usuarios>();
             RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
 
             if (CriteriotextBox.Text.Trim().Length > 0)
@@ -81,6 +83,10 @@ namespace ProyectoFinal.UI.Consultas
             ConsultadataGridView.DataSource = listado;
         }
 
-       
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            UsuariosReportViewer reporte = new UsuariosReportViewer(listado);
+            reporte.ShowDialog();
+        }
     }
 }
