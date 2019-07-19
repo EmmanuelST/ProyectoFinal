@@ -249,5 +249,8 @@
   <ItemGroup>
     <None Include="Resources\listaTyni.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

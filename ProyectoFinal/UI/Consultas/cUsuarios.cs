@@ -77,7 +77,7 @@ namespace ProyectoFinal.UI.Consultas
 
             //listado = listado.Where(E => E.FechaIngreso >= DesdedateTimePicker.Value.Date  && E.FechaIngreso <= HastadateTimePicker.Value.Date ).ToList();
 
-            ConsultadataGridView.DataSource = null;
+            //ConsultadataGridView.DataSource = null;
             ConsultadataGridView.DataSource = listado;
         }
     }

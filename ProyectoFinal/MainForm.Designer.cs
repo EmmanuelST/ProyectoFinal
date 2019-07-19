@@ -33,6 +33,7 @@
             this.registrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             // registrosToolStripMenuItem
             // 
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarUsuariosToolStripMenuItem});
+            this.registrarUsuariosToolStripMenuItem,
+            this.registrarClientesToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registrosToolStripMenuItem.Text = "&Registros";
@@ -78,6 +80,13 @@
             this.consultarUsuariosToolStripMenuItem.Text = "Consultar &Usuarios";
             this.consultarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.ConsultarUsuariosToolStripMenuItem_Click);
             // 
+            // registrarClientesToolStripMenuItem
+            // 
+            this.registrarClientesToolStripMenuItem.Name = "registrarClientesToolStripMenuItem";
+            this.registrarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarClientesToolStripMenuItem.Text = "Registrar &Clientes";
+            this.registrarClientesToolStripMenuItem.Click += new System.EventHandler(this.RegistrarClientesToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,6 +97,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -102,6 +112,7 @@
         private System.Windows.Forms.ToolStripMenuItem registrarUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarClientesToolStripMenuItem;
     }
 }
 

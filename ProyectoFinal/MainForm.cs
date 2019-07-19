@@ -46,5 +46,12 @@ namespace ProyectoFinal
         {
 
         }
+
+        private void RegistrarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rCliente registro = new rCliente();
+            registro.MdiParent = this;
+            registro.Show();
+        }
     }
 }

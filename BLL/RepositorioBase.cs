@@ -102,6 +102,9 @@ namespace BLL
             try
             {
                 T entity = this.Buscar(id);
+                if (entity is null)
+                    return false;
+
                 db.Entry(entity).State = EntityState.Deleted;
                 paso = db.SaveChanges() > 0;
 

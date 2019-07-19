@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace Entidades
         public int IdUsuario { get; set; }
         public string Nombre { get; set; }
         public string Usuario { get; set; }
+        [Browsable(false)]
         public string Clave { get; set; }
         public DateTime FechaRegistro { get; set; }
         public int NivelUsuario { get; set; }

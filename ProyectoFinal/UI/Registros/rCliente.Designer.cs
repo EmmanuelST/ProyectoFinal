@@ -28,38 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rCliente));
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.NombretextBox = new System.Windows.Forms.TextBox();
+            this.CedulatextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.DirecciontextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TelefonotextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.CelulartextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.BalancetextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.LimiteVentasnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.LimiteCreditonumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LimiteVentasnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LimiteCreditonumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -71,12 +74,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Id:";
             // 
-            // numericUpDown1
+            // IdnumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(64, 19);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(136, 20);
-            this.numericUpDown1.TabIndex = 2;
+            this.IdnumericUpDown.Location = new System.Drawing.Point(64, 19);
+            this.IdnumericUpDown.Name = "IdnumericUpDown";
+            this.IdnumericUpDown.Size = new System.Drawing.Size(136, 20);
+            this.IdnumericUpDown.TabIndex = 2;
             // 
             // label3
             // 
@@ -87,19 +90,19 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Nombre:";
             // 
-            // textBox1
+            // NombretextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 20);
-            this.textBox1.TabIndex = 4;
+            this.NombretextBox.Location = new System.Drawing.Point(64, 51);
+            this.NombretextBox.Name = "NombretextBox";
+            this.NombretextBox.Size = new System.Drawing.Size(242, 20);
+            this.NombretextBox.TabIndex = 4;
             // 
-            // textBox2
+            // CedulatextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(64, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 20);
-            this.textBox2.TabIndex = 6;
+            this.CedulatextBox.Location = new System.Drawing.Point(64, 77);
+            this.CedulatextBox.Name = "CedulatextBox";
+            this.CedulatextBox.Size = new System.Drawing.Size(242, 20);
+            this.CedulatextBox.TabIndex = 6;
             // 
             // label4
             // 
@@ -110,13 +113,13 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Cedula:";
             // 
-            // textBox3
+            // DirecciontextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(64, 103);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(242, 66);
-            this.textBox3.TabIndex = 8;
+            this.DirecciontextBox.Location = new System.Drawing.Point(64, 103);
+            this.DirecciontextBox.Multiline = true;
+            this.DirecciontextBox.Name = "DirecciontextBox";
+            this.DirecciontextBox.Size = new System.Drawing.Size(242, 66);
+            this.DirecciontextBox.TabIndex = 8;
             // 
             // label5
             // 
@@ -127,12 +130,12 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Direccion:";
             // 
-            // textBox4
+            // TelefonotextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(64, 175);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(242, 20);
-            this.textBox4.TabIndex = 10;
+            this.TelefonotextBox.Location = new System.Drawing.Point(64, 175);
+            this.TelefonotextBox.Name = "TelefonotextBox";
+            this.TelefonotextBox.Size = new System.Drawing.Size(242, 20);
+            this.TelefonotextBox.TabIndex = 10;
             // 
             // label6
             // 
@@ -152,29 +155,29 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Celular:";
             // 
-            // textBox5
+            // CelulartextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(64, 207);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(242, 20);
-            this.textBox5.TabIndex = 12;
+            this.CelulartextBox.Location = new System.Drawing.Point(64, 207);
+            this.CelulartextBox.Name = "CelulartextBox";
+            this.CelulartextBox.Size = new System.Drawing.Size(242, 20);
+            this.CelulartextBox.TabIndex = 12;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.Buscarbutton);
+            this.groupBox1.Controls.Add(this.FechadateTimePicker);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.CelulartextBox);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.TelefonotextBox);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.DirecciontextBox);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.CedulatextBox);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.NombretextBox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.IdnumericUpDown);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
@@ -183,26 +186,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             // 
-            // button1
+            // Buscarbutton
             // 
-            this.button1.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(231, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(231, 16);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Buscarbutton.TabIndex = 15;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // dateTimePicker1
+            // FechadateTimePicker
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 235);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(192, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(114, 235);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(192, 20);
+            this.FechadateTimePicker.TabIndex = 14;
             // 
             // label8
             // 
@@ -215,11 +219,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.BalancetextBox);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.numericUpDown3);
+            this.groupBox2.Controls.Add(this.LimiteVentasnumericUpDown);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.numericUpDown2);
+            this.groupBox2.Controls.Add(this.LimiteCreditonumericUpDown);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Location = new System.Drawing.Point(12, 289);
             this.groupBox2.Name = "groupBox2";
@@ -228,13 +232,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Control de Credito";
             // 
-            // textBox6
+            // BalancetextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(102, 77);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(204, 20);
-            this.textBox6.TabIndex = 8;
+            this.BalancetextBox.Location = new System.Drawing.Point(102, 77);
+            this.BalancetextBox.Name = "BalancetextBox";
+            this.BalancetextBox.ReadOnly = true;
+            this.BalancetextBox.Size = new System.Drawing.Size(204, 20);
+            this.BalancetextBox.TabIndex = 8;
+            this.BalancetextBox.Text = "0.0";
             // 
             // label11
             // 
@@ -245,13 +250,13 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "Balance:";
             // 
-            // numericUpDown3
+            // LimiteVentasnumericUpDown
             // 
-            this.numericUpDown3.DecimalPlaces = 2;
-            this.numericUpDown3.Location = new System.Drawing.Point(103, 43);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(203, 20);
-            this.numericUpDown3.TabIndex = 6;
+            this.LimiteVentasnumericUpDown.DecimalPlaces = 2;
+            this.LimiteVentasnumericUpDown.Location = new System.Drawing.Point(103, 43);
+            this.LimiteVentasnumericUpDown.Name = "LimiteVentasnumericUpDown";
+            this.LimiteVentasnumericUpDown.Size = new System.Drawing.Size(203, 20);
+            this.LimiteVentasnumericUpDown.TabIndex = 6;
             // 
             // label10
             // 
@@ -262,13 +267,13 @@
             this.label10.TabIndex = 5;
             this.label10.Text = "Limite de Ventas:";
             // 
-            // numericUpDown2
+            // LimiteCreditonumericUpDown
             // 
-            this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Location = new System.Drawing.Point(103, 17);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(203, 20);
-            this.numericUpDown2.TabIndex = 4;
+            this.LimiteCreditonumericUpDown.DecimalPlaces = 2;
+            this.LimiteCreditonumericUpDown.Location = new System.Drawing.Point(103, 17);
+            this.LimiteCreditonumericUpDown.Name = "LimiteCreditonumericUpDown";
+            this.LimiteCreditonumericUpDown.Size = new System.Drawing.Size(203, 20);
+            this.LimiteCreditonumericUpDown.TabIndex = 4;
             // 
             // label9
             // 
@@ -279,92 +284,102 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "Limite de Credito:";
             // 
-            // button3
+            // Guardarbutton
             // 
-            this.button3.Image = global::ProyectoFinal.Properties.Resources.guardar;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(137, 429);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 60);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Guardar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Image = global::ProyectoFinal.Properties.Resources.guardar;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Guardarbutton.Location = new System.Drawing.Point(137, 429);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(75, 60);
+            this.Guardarbutton.TabIndex = 16;
+            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
-            // button4
+            // Eliminarbutton
             // 
-            this.button4.Image = global::ProyectoFinal.Properties.Resources.eliminar;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(243, 429);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 60);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Eliminar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Image = global::ProyectoFinal.Properties.Resources.eliminar;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Eliminarbutton.Location = new System.Drawing.Point(243, 429);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 60);
+            this.Eliminarbutton.TabIndex = 17;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
-            // button2
+            // Nuevobutton
             // 
-            this.button2.Image = global::ProyectoFinal.Properties.Resources.nuevo;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(34, 429);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 60);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Nuevo";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Image = global::ProyectoFinal.Properties.Resources.nuevo;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(34, 429);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(75, 60);
+            this.Nuevobutton.TabIndex = 15;
+            this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
             // 
             // rCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 505);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Eliminarbutton);
+            this.Controls.Add(this.Guardarbutton);
+            this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rCliente";
             this.Text = "Registro de Clientes";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LimiteVentasnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LimiteCreditonumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown IdnumericUpDown;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox NombretextBox;
+        private System.Windows.Forms.TextBox CedulatextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox DirecciontextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TelefonotextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox CelulartextBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox BalancetextBox;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown LimiteVentasnumericUpDown;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown LimiteCreditonumericUpDown;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Nuevobutton;
+        private System.Windows.Forms.Button Guardarbutton;
+        private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
