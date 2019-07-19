@@ -74,5 +74,12 @@ namespace ProyectoFinal
             registro.MdiParent = this;
             registro.Show();
         }
+
+        private void EntradaDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rEntradaProducto registro = new rEntradaProducto();
+            registro.MdiParent = this;
+            registro.Show();
+        }
     }
 }

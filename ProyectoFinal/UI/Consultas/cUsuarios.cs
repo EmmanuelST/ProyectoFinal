@@ -80,5 +80,7 @@ namespace ProyectoFinal.UI.Consultas
             //ConsultadataGridView.DataSource = null;
             ConsultadataGridView.DataSource = listado;
         }
+
+       
     }
 }
