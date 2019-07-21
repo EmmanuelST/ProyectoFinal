@@ -68,6 +68,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\BusquedaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\BusquedaProducto.Designer.cs">
+      <DependentUpon>BusquedaProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Consultas\UsuariosReportViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\BusquedaProducto.resx">
+      <DependentUpon>BusquedaProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\UsuariosReportViewer.resx">
       <DependentUpon>UsuariosReportViewer.cs</DependentUpon>
     </EmbeddedResource>

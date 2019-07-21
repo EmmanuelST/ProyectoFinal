@@ -182,7 +182,6 @@
             this.button1.Text = "Imprirmir";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
-            
             // 
             // Buscarbutton
             // 
@@ -192,6 +191,7 @@
             this.Buscarbutton.Size = new System.Drawing.Size(46, 23);
             this.Buscarbutton.TabIndex = 9;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // cClientes
             // 

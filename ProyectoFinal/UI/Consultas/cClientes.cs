@@ -17,6 +17,9 @@ namespace ProyectoFinal.UI.Consultas
             InitializeComponent();
         }
 
-       
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
