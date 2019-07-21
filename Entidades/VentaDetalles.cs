@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Entidades
 {
     public class VentaDetalles
     {
-
+        [Key]
         public int IdVentaDetalle { get; set; }
         public int IdVenta { get; set; }
         public int IdProducto { get; set; } 
@@ -24,6 +25,11 @@ namespace Entidades
             Cantidad = 0;
             Precio = 0;
             SubTotal = 0;
+        }
+
+        public void CalularSubTotal()
+        {
+            SubTotal = Precio * Cantidad;
         }
     }
 }

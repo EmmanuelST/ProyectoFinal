@@ -18,7 +18,7 @@ namespace ProyectoFinal.UI.Consultas
         public UsuariosReportViewer(List<Usuarios> listados)
         {
             InitializeComponent();
-            this.listado = listado;
+            this.listado = listados;
             UsuariosReport reporte = new UsuariosReport();
             reporte.SetDataSource(listado);
             MycrystalReportViewer.ReportSource = reporte;
