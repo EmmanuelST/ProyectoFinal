@@ -81,5 +81,19 @@ namespace ProyectoFinal
             registro.MdiParent = this;
             registro.Show();
         }
+
+        private void RegistroDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rCompras registro = new rCompras();
+            registro.MdiParent = this;
+            registro.Show();
+        }
+
+        private void RegistroDeAgricultoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rAgricultor registro = new rAgricultor();
+            registro.MdiParent = this;
+            registro.Show();
+        }
     }
 }

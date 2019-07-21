@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace Entidades
 {
     public class Compras
     {
+        [Key]
         public int IdCompra { get; set; }
         public int IdPesador { get; set; }
         public int IdAgricultor { get; set; }
@@ -18,6 +20,7 @@ namespace Entidades
         public decimal Humedad { get; set; }
         public decimal TotalFanegas {get;set;}
         public decimal PrecioFanegas { get; set; }
+        public decimal CantidadSacos { get; set; }
 
         public Compras()
         {
@@ -31,6 +34,7 @@ namespace Entidades
             Humedad = 0;
             TotalFanegas = 0;
             PrecioFanegas = 0;
+            CantidadSacos = 0;
         }
     }
 }

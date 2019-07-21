@@ -98,6 +98,12 @@
     <Compile Include="UI\Registros\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rAgricultor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rAgricultor.Designer.cs">
+      <DependentUpon>rAgricultor.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rAgricultor.resx">
+      <DependentUpon>rAgricultor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rCliente.resx">
       <DependentUpon>rCliente.cs</DependentUpon>

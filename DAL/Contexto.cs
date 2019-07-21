@@ -15,6 +15,8 @@ namespace DAL
         public DbSet<Pesadores>Pesador { get; set; }
         public DbSet<Vendedores>Vendedor { get; set; }
         public DbSet<Productos>Producto { get; set; }
+        public DbSet<Compras>Compra { get; set; }
+        public DbSet<Agricultores>Agricultor { get; set; }
 
         public Contexto() : base("ConStr")
         {
