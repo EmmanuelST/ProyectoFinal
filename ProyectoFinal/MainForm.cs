@@ -18,8 +18,8 @@ namespace ProyectoFinal
         public MainForm()
         {
             InitializeComponent();
-            /*Login login = new Login();
-            login.ShowDialog();*/
+            Login login = new Login();
+            login.ShowDialog();
            
         }
 
@@ -150,6 +150,12 @@ namespace ProyectoFinal
             cVentas consulta = new cVentas();
             consulta.MdiParent = this;
             consulta.Show();
+        }
+
+        private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.ShowDialog();
         }
     }
 }

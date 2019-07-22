@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ContrasenatextBox = new System.Windows.Forms.TextBox();
             this.Cancelarbutton = new System.Windows.Forms.Button();
             this.loginbutton = new System.Windows.Forms.Button();
+            this.UsuariotextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -54,21 +54,13 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña:";
             // 
-            // comboBox1
+            // ContrasenatextBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(76, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 21);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(76, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(228, 20);
-            this.textBox1.TabIndex = 3;
+            this.ContrasenatextBox.Location = new System.Drawing.Point(76, 69);
+            this.ContrasenatextBox.Name = "ContrasenatextBox";
+            this.ContrasenatextBox.PasswordChar = '*';
+            this.ContrasenatextBox.Size = new System.Drawing.Size(228, 20);
+            this.ContrasenatextBox.TabIndex = 3;
             // 
             // Cancelarbutton
             // 
@@ -94,18 +86,28 @@
             this.loginbutton.Text = "Iniciar Sesión";
             this.loginbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.loginbutton.UseVisualStyleBackColor = true;
+            this.loginbutton.Click += new System.EventHandler(this.Loginbutton_Click);
+            // 
+            // UsuariotextBox
+            // 
+            this.UsuariotextBox.Location = new System.Drawing.Point(76, 31);
+            this.UsuariotextBox.Name = "UsuariotextBox";
+            this.UsuariotextBox.Size = new System.Drawing.Size(228, 20);
+            this.UsuariotextBox.TabIndex = 6;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(323, 170);
+            this.Controls.Add(this.UsuariotextBox);
             this.Controls.Add(this.Cancelarbutton);
             this.Controls.Add(this.loginbutton);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ContrasenatextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -118,9 +120,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ContrasenatextBox;
         private System.Windows.Forms.Button loginbutton;
         private System.Windows.Forms.Button Cancelarbutton;
+        private System.Windows.Forms.TextBox UsuariotextBox;
     }
 }
