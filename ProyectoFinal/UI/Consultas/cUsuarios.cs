@@ -19,6 +19,7 @@ namespace ProyectoFinal.UI.Consultas
         {
             InitializeComponent();
             listado = new List<Usuarios>();
+            FiltrocomboBox.SelectedIndex = 0;
             Buscar();
         }
 
@@ -50,19 +51,16 @@ namespace ProyectoFinal.UI.Consultas
                             break;
 
                         case 2://Nombre
-                            listado = db.GetList(U => U.Nombre == CriteriotextBox.Text);
+                            listado = db.GetList(U => U.Nombre.Contains(CriteriotextBox.Text));
                             break;
 
                         case 3:// Usuario
-                            listado = db.GetList(U => U.Usuario == CriteriotextBox.Text);
+                            listado = db.GetList(U => U.Usuario.Contains(CriteriotextBox.Text));
                             break;
 
                     }
 
-                    if(FechacheckBox.Checked)
-                    {
-                        listado = listado.Where(U => U.FechaRegistro >= DesdedateTimePicker.Value.Date && U.FechaRegistro <= HastadateTimePicker.Value.Date).ToList();
-                    }
+                   
                     
 
                 }
@@ -77,9 +75,11 @@ namespace ProyectoFinal.UI.Consultas
                 listado = db.GetList(p => true);
             }
 
-            //listado = listado.Where(E => E.FechaIngreso >= DesdedateTimePicker.Value.Date  && E.FechaIngreso <= HastadateTimePicker.Value.Date ).ToList();
-
-            //ConsultadataGridView.DataSource = null;
+            if (FechacheckBox.Checked)
+            {
+                listado = listado.Where(U => U.FechaRegistro >= DesdedateTimePicker.Value.Date && U.FechaRegistro <= HastadateTimePicker.Value.AddDays(1).Date).ToList();
+            }
+           
             ConsultadataGridView.DataSource = listado;
         }
 
@@ -87,6 +87,31 @@ namespace ProyectoFinal.UI.Consultas
         {
             UsuariosReportViewer reporte = new UsuariosReportViewer(listado);
             reporte.ShowDialog();
+        }
+
+        private void FechacheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void CriteriotextBox_TextChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void DesdedateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void HastadateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void FiltrocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Buscar();
         }
     }
 }

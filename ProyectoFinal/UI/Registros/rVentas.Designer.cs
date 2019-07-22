@@ -49,13 +49,20 @@
             this.label12 = new System.Windows.Forms.Label();
             this.TipoVentacomboBox = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.BuscarVendedorbutton = new System.Windows.Forms.Button();
+            this.BuscarClientebutton = new System.Windows.Forms.Button();
+            this.BuscarVentabutton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ProductoCantidadnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.TotaltextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.EliminarFilabutton = new System.Windows.Forms.Button();
+            this.ListaProductobutton = new System.Windows.Forms.Button();
+            this.AgregarProductobutton = new System.Windows.Forms.Button();
             this.NombreProductotextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.BuscarProductobutton = new System.Windows.Forms.Button();
             this.IdProductonumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
@@ -67,13 +74,6 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
-            this.EliminarFilabutton = new System.Windows.Forms.Button();
-            this.ListaProductobutton = new System.Windows.Forms.Button();
-            this.AgregarProductobutton = new System.Windows.Forms.Button();
-            this.BuscarProductobutton = new System.Windows.Forms.Button();
-            this.BuscarVendedorbutton = new System.Windows.Forms.Button();
-            this.BuscarClientebutton = new System.Windows.Forms.Button();
-            this.BuscarVentabutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdVentanumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdClientenumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdVendedornumericUpDown)).BeginInit();
@@ -273,6 +273,43 @@
             this.label11.TabIndex = 18;
             this.label11.Text = "Tipo de Venta:";
             // 
+            // BuscarVendedorbutton
+            // 
+            this.BuscarVendedorbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
+            this.BuscarVendedorbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarVendedorbutton.Location = new System.Drawing.Point(490, 16);
+            this.BuscarVendedorbutton.Name = "BuscarVendedorbutton";
+            this.BuscarVendedorbutton.Size = new System.Drawing.Size(75, 23);
+            this.BuscarVendedorbutton.TabIndex = 17;
+            this.BuscarVendedorbutton.Text = "Buscar";
+            this.BuscarVendedorbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BuscarVendedorbutton.UseVisualStyleBackColor = true;
+            // 
+            // BuscarClientebutton
+            // 
+            this.BuscarClientebutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
+            this.BuscarClientebutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarClientebutton.Location = new System.Drawing.Point(194, 75);
+            this.BuscarClientebutton.Name = "BuscarClientebutton";
+            this.BuscarClientebutton.Size = new System.Drawing.Size(75, 23);
+            this.BuscarClientebutton.TabIndex = 16;
+            this.BuscarClientebutton.Text = "Buscar";
+            this.BuscarClientebutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BuscarClientebutton.UseVisualStyleBackColor = true;
+            // 
+            // BuscarVentabutton
+            // 
+            this.BuscarVentabutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
+            this.BuscarVentabutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarVentabutton.Location = new System.Drawing.Point(194, 16);
+            this.BuscarVentabutton.Name = "BuscarVentabutton";
+            this.BuscarVentabutton.Size = new System.Drawing.Size(75, 23);
+            this.BuscarVentabutton.TabIndex = 13;
+            this.BuscarVentabutton.Text = "Buscar";
+            this.BuscarVentabutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BuscarVentabutton.UseVisualStyleBackColor = true;
+            this.BuscarVentabutton.Click += new System.EventHandler(this.BuscarVentabutton_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ProductoCantidadnumericUpDown);
@@ -330,6 +367,38 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "Total:";
             // 
+            // EliminarFilabutton
+            // 
+            this.EliminarFilabutton.Image = global::ProyectoFinal.Properties.Resources.remover;
+            this.EliminarFilabutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EliminarFilabutton.Location = new System.Drawing.Point(7, 218);
+            this.EliminarFilabutton.Name = "EliminarFilabutton";
+            this.EliminarFilabutton.Size = new System.Drawing.Size(103, 38);
+            this.EliminarFilabutton.TabIndex = 18;
+            this.EliminarFilabutton.Text = "Eliminar Fila";
+            this.EliminarFilabutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EliminarFilabutton.UseVisualStyleBackColor = true;
+            this.EliminarFilabutton.Click += new System.EventHandler(this.EliminarFilabutton_Click);
+            // 
+            // ListaProductobutton
+            // 
+            this.ListaProductobutton.Image = global::ProyectoFinal.Properties.Resources.listaTyni;
+            this.ListaProductobutton.Location = new System.Drawing.Point(186, 15);
+            this.ListaProductobutton.Name = "ListaProductobutton";
+            this.ListaProductobutton.Size = new System.Drawing.Size(49, 40);
+            this.ListaProductobutton.TabIndex = 16;
+            this.ListaProductobutton.UseVisualStyleBackColor = true;
+            // 
+            // AgregarProductobutton
+            // 
+            this.AgregarProductobutton.Image = global::ProyectoFinal.Properties.Resources.add;
+            this.AgregarProductobutton.Location = new System.Drawing.Point(535, 20);
+            this.AgregarProductobutton.Name = "AgregarProductobutton";
+            this.AgregarProductobutton.Size = new System.Drawing.Size(40, 36);
+            this.AgregarProductobutton.TabIndex = 17;
+            this.AgregarProductobutton.UseVisualStyleBackColor = true;
+            this.AgregarProductobutton.Click += new System.EventHandler(this.AgregarProductobutton_Click);
+            // 
             // NombreProductotextBox
             // 
             this.NombreProductotextBox.Location = new System.Drawing.Point(296, 28);
@@ -346,6 +415,16 @@
             this.label9.Size = new System.Drawing.Size(53, 13);
             this.label9.TabIndex = 15;
             this.label9.Text = "Producto:";
+            // 
+            // BuscarProductobutton
+            // 
+            this.BuscarProductobutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
+            this.BuscarProductobutton.Location = new System.Drawing.Point(138, 26);
+            this.BuscarProductobutton.Name = "BuscarProductobutton";
+            this.BuscarProductobutton.Size = new System.Drawing.Size(42, 23);
+            this.BuscarProductobutton.TabIndex = 16;
+            this.BuscarProductobutton.UseVisualStyleBackColor = true;
+            this.BuscarProductobutton.Click += new System.EventHandler(this.BuscarProductobutton_Click);
             // 
             // IdProductonumericUpDown
             // 
@@ -424,6 +503,7 @@
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -450,84 +530,6 @@
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
-            // 
-            // EliminarFilabutton
-            // 
-            this.EliminarFilabutton.Image = global::ProyectoFinal.Properties.Resources.remover;
-            this.EliminarFilabutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.EliminarFilabutton.Location = new System.Drawing.Point(7, 218);
-            this.EliminarFilabutton.Name = "EliminarFilabutton";
-            this.EliminarFilabutton.Size = new System.Drawing.Size(103, 38);
-            this.EliminarFilabutton.TabIndex = 18;
-            this.EliminarFilabutton.Text = "Eliminar Fila";
-            this.EliminarFilabutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarFilabutton.UseVisualStyleBackColor = true;
-            this.EliminarFilabutton.Click += new System.EventHandler(this.EliminarFilabutton_Click);
-            // 
-            // ListaProductobutton
-            // 
-            this.ListaProductobutton.Image = global::ProyectoFinal.Properties.Resources.listaTyni;
-            this.ListaProductobutton.Location = new System.Drawing.Point(186, 15);
-            this.ListaProductobutton.Name = "ListaProductobutton";
-            this.ListaProductobutton.Size = new System.Drawing.Size(49, 40);
-            this.ListaProductobutton.TabIndex = 16;
-            this.ListaProductobutton.UseVisualStyleBackColor = true;
-            // 
-            // AgregarProductobutton
-            // 
-            this.AgregarProductobutton.Image = global::ProyectoFinal.Properties.Resources.add;
-            this.AgregarProductobutton.Location = new System.Drawing.Point(535, 20);
-            this.AgregarProductobutton.Name = "AgregarProductobutton";
-            this.AgregarProductobutton.Size = new System.Drawing.Size(40, 36);
-            this.AgregarProductobutton.TabIndex = 17;
-            this.AgregarProductobutton.UseVisualStyleBackColor = true;
-            this.AgregarProductobutton.Click += new System.EventHandler(this.AgregarProductobutton_Click);
-            // 
-            // BuscarProductobutton
-            // 
-            this.BuscarProductobutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.BuscarProductobutton.Location = new System.Drawing.Point(138, 26);
-            this.BuscarProductobutton.Name = "BuscarProductobutton";
-            this.BuscarProductobutton.Size = new System.Drawing.Size(42, 23);
-            this.BuscarProductobutton.TabIndex = 16;
-            this.BuscarProductobutton.UseVisualStyleBackColor = true;
-            this.BuscarProductobutton.Click += new System.EventHandler(this.BuscarProductobutton_Click);
-            // 
-            // BuscarVendedorbutton
-            // 
-            this.BuscarVendedorbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.BuscarVendedorbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BuscarVendedorbutton.Location = new System.Drawing.Point(490, 16);
-            this.BuscarVendedorbutton.Name = "BuscarVendedorbutton";
-            this.BuscarVendedorbutton.Size = new System.Drawing.Size(75, 23);
-            this.BuscarVendedorbutton.TabIndex = 17;
-            this.BuscarVendedorbutton.Text = "Buscar";
-            this.BuscarVendedorbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarVendedorbutton.UseVisualStyleBackColor = true;
-            // 
-            // BuscarClientebutton
-            // 
-            this.BuscarClientebutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.BuscarClientebutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BuscarClientebutton.Location = new System.Drawing.Point(194, 75);
-            this.BuscarClientebutton.Name = "BuscarClientebutton";
-            this.BuscarClientebutton.Size = new System.Drawing.Size(75, 23);
-            this.BuscarClientebutton.TabIndex = 16;
-            this.BuscarClientebutton.Text = "Buscar";
-            this.BuscarClientebutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarClientebutton.UseVisualStyleBackColor = true;
-            // 
-            // BuscarVentabutton
-            // 
-            this.BuscarVentabutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.BuscarVentabutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BuscarVentabutton.Location = new System.Drawing.Point(194, 16);
-            this.BuscarVentabutton.Name = "BuscarVentabutton";
-            this.BuscarVentabutton.Size = new System.Drawing.Size(75, 23);
-            this.BuscarVentabutton.TabIndex = 13;
-            this.BuscarVentabutton.Text = "Buscar";
-            this.BuscarVentabutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarVentabutton.UseVisualStyleBackColor = true;
             // 
             // rVentas
             // 

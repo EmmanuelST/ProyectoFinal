@@ -24,8 +24,9 @@ namespace ProyectoFinal.UI
 
         private void CargarGrip()
         {
+            DetalledataGridView.DataSource = null;
             DetalledataGridView.DataSource = this.Detalles;
-            DetalledataGridView.Refresh();
+            //DetalledataGridView.Refresh();
         }
 
         private void RefreshTotal()
@@ -59,6 +60,7 @@ namespace ProyectoFinal.UI
             IdProductonumericUpDown.Value = 0;
             NombreProductotextBox.Text = string.Empty;
             ProductoCantidadnumericUpDown.Value = 0;
+            Detalles = new List<VentaDetalles>();
             CargarGrip();
             RefreshTotal();
         }
@@ -83,6 +85,18 @@ namespace ProyectoFinal.UI
                     else
                     {
                         MessageBox.Show("No se pudo guardar","Atencion!!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    if(db.Modificar(venta))
+                    {
+                        MessageBox.Show("Guardado correctamente", "Información!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo modificar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
 
@@ -256,22 +270,25 @@ namespace ProyectoFinal.UI
                 return;
             }
 
-            Productos producto = BuscarProducto();
-            VentaDetalles detalle = new VentaDetalles()
+            Productos producto;
+            if ((producto = BuscarProducto())!= null)
             {
-                IdProducto = producto.IdProductos,
-                Precio = producto.Precio,
-                Cantidad = ProductoCantidadnumericUpDown.Value
+                VentaDetalles detalle = new VentaDetalles()
+                {
+                    IdProducto = producto.IdProductos,
+                    Precio = producto.Precio,
+                    Cantidad = ProductoCantidadnumericUpDown.Value
 
-            };
+                };
 
-            detalle.CalularSubTotal();
+                detalle.CalularSubTotal();
 
-            Detalles.Add(detalle);
-            CargarGrip();
+                Detalles.Add(detalle);
+                CargarGrip();
 
-            RefreshTotal();
-
+                RefreshTotal();
+            }
+            
         }
 
         private void EliminarFilabutton_Click(object sender, EventArgs e)
@@ -302,6 +319,67 @@ namespace ProyectoFinal.UI
             consulta.ShowDialog();
             IdProductonumericUpDown.Value = consulta.id;
             consulta.Close();
+        }
+
+        private void BuscarVentabutton_Click(object sender, EventArgs e)
+        {
+            RepositorioVentas db = new RepositorioVentas();
+            
+            try
+            {
+                Ventas venta;
+                if ((venta = db.Buscar((int)IdVentanumericUpDown.Value))!= null)
+                {
+                    LlenarCampos(venta);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo encontrar","Informacion!!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                }
+                
+            }catch(Exception)
+            {
+                throw;
+            }
+
+        }
+
+        private void LlenarCampos(Ventas venta)
+        {
+            IdVentanumericUpDown.Value = venta.IdVenta;
+            FechaVentadateTimePicker.Value = venta.Fecha;
+            IdClientenumericUpDown.Value = venta.IdCliente;
+            IdVendedornumericUpDown.Value = venta.IdVendedor;
+            TipoVentacomboBox.SelectedIndex = (int)venta.TipoVeta;
+            InteresnumericUpDown.Value = venta.TasaInteres;
+            HastadateTimePicker.Value = venta.HastaFecha;
+            Detalles = venta.Detalles;
+            CargarGrip();
+            RefreshTotal();
+
+        }
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            RepositorioVentas db = new RepositorioVentas();
+
+            try
+            {
+                if(db.Elimimar((int)IdVentanumericUpDown.Value))
+                {
+                    MessageBox.Show("eliminado correctamente", "Información!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar", "Informacion!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+
+            }catch(Exception)
+            {
+                throw;
+            }
         }
     }
 }

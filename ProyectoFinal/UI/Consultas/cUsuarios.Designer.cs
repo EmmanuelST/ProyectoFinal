@@ -112,6 +112,7 @@
             this.CriteriotextBox.Name = "CriteriotextBox";
             this.CriteriotextBox.Size = new System.Drawing.Size(208, 20);
             this.CriteriotextBox.TabIndex = 19;
+            this.CriteriotextBox.TextChanged += new System.EventHandler(this.CriteriotextBox_TextChanged);
             // 
             // label4
             // 
@@ -126,13 +127,15 @@
             // 
             this.FiltrocomboBox.FormattingEnabled = true;
             this.FiltrocomboBox.Items.AddRange(new object[] {
-            "id",
+            "Todo",
+            "Id",
             "Nombre",
             "Usuario"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(240, 31);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(193, 21);
             this.FiltrocomboBox.TabIndex = 17;
+            this.FiltrocomboBox.SelectedIndexChanged += new System.EventHandler(this.FiltrocomboBox_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -152,6 +155,7 @@
             this.FechacheckBox.TabIndex = 15;
             this.FechacheckBox.Text = "Filtrar por Fecha";
             this.FechacheckBox.UseVisualStyleBackColor = true;
+            this.FechacheckBox.CheckedChanged += new System.EventHandler(this.FechacheckBox_CheckedChanged);
             // 
             // HastadateTimePicker
             // 
@@ -161,6 +165,7 @@
             this.HastadateTimePicker.Name = "HastadateTimePicker";
             this.HastadateTimePicker.Size = new System.Drawing.Size(96, 20);
             this.HastadateTimePicker.TabIndex = 14;
+            this.HastadateTimePicker.ValueChanged += new System.EventHandler(this.HastadateTimePicker_ValueChanged);
             // 
             // label2
             // 
@@ -179,6 +184,7 @@
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
             this.DesdedateTimePicker.Size = new System.Drawing.Size(96, 20);
             this.DesdedateTimePicker.TabIndex = 12;
+            this.DesdedateTimePicker.ValueChanged += new System.EventHandler(this.DesdedateTimePicker_ValueChanged);
             // 
             // label1
             // 
