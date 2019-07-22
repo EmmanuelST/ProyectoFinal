@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ContrasenatextBox = new System.Windows.Forms.TextBox();
             this.Cancelarbutton = new System.Windows.Forms.Button();
             this.loginbutton = new System.Windows.Forms.Button();
             this.UsuariotextBox = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,6 +99,11 @@
             this.UsuariotextBox.Size = new System.Drawing.Size(228, 20);
             this.UsuariotextBox.TabIndex = 6;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,6 +120,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +134,6 @@
         private System.Windows.Forms.Button loginbutton;
         private System.Windows.Forms.Button Cancelarbutton;
         private System.Windows.Forms.TextBox UsuariotextBox;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

@@ -50,6 +50,7 @@
             this.Controls.Add(this.MycrystalReportViewer);
             this.Name = "VentasReportViewer";
             this.Text = "VentasReportViewer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

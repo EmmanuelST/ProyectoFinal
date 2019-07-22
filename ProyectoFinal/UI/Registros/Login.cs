@@ -29,18 +29,43 @@ namespace ProyectoFinal.UI.Registros
 
         private void Loginbutton_Click(object sender, EventArgs e)
         {
+            if (!Validar())
+                return;
 
             if(Log_in())
             {
                 MainForm main = new MainForm();
-                this.Dispose();
-                main.Show();
+                Hide();
+                main.ShowDialog();
+                Dispose();
+                
             }
             else
             {
                 MessageBox.Show("Usuario o Contraseña incorrectos");
             }
 
+        }
+
+        private bool Validar()
+        {
+            bool paso = true;
+            errorProvider.Clear();
+
+            if(string.IsNullOrWhiteSpace(UsuariotextBox.Text))
+            {
+                paso = false;
+                errorProvider.SetError(UsuariotextBox,"Debe escribir un usuario");
+            }
+
+            if (string.IsNullOrWhiteSpace(ContrasenatextBox.Text))
+            {
+                paso = false;
+                errorProvider.SetError(ContrasenatextBox, "Debe escribir una contraseña");
+            }
+
+
+            return paso;
         }
 
         private bool Log_in()
@@ -68,7 +93,7 @@ namespace ProyectoFinal.UI.Registros
             try
             {
 
-                if (!db.Repetido(U => U.Usuario.Equals("Root")))
+                if (db.Repetido(U => U.Usuario.Equals("Root")) == false)
                 {
                     db.Guardar(new Usuarios()
                     {
