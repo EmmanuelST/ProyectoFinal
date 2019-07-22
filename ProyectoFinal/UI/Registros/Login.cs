@@ -32,9 +32,12 @@ namespace ProyectoFinal.UI.Registros
             if (!Validar())
                 return;
 
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
             if(Log_in())
             {
-                MainForm main = new MainForm();
+                List<Usuarios> usuario = db.GetList(U => U.Usuario == UsuariotextBox.Text);
+                MainForm main = new MainForm(usuario[0].IdUsuario);
                 Hide();
                 main.ShowDialog();
                 Dispose();

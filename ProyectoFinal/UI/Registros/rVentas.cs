@@ -16,9 +16,11 @@ namespace ProyectoFinal.UI
     public partial class rVentas : Form
     {
         private List<VentaDetalles> Detalles;
-        public rVentas()
+        private int IdUsuario;
+        public rVentas(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
             Detalles = new List<VentaDetalles>();
         }
 
@@ -146,6 +148,7 @@ namespace ProyectoFinal.UI
             venta.TasaInteres = InteresnumericUpDown.Value;
             venta.HastaFecha = HastadateTimePicker.Value;
             venta.Detalles = Detalles;
+            venta.IdUsuario = IdUsuario;
             RefreshTotal();
             try
             {
@@ -313,12 +316,12 @@ namespace ProyectoFinal.UI
 
         private void BuscarProductobutton_Click(object sender, EventArgs e)
         {
-            Productos producto = new Productos();
+            /*Productos producto = new Productos();
             int id = 0;
             BusquedaProducto consulta = new BusquedaProducto();
             consulta.ShowDialog();
             IdProductonumericUpDown.Value = consulta.id;
-            consulta.Close();
+            consulta.Close();*/
         }
 
         private void BuscarVentabutton_Click(object sender, EventArgs e)

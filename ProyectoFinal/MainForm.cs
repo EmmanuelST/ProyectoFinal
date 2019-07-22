@@ -15,9 +15,11 @@ namespace ProyectoFinal
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public int IdUsuario { get; set; }
+        public MainForm(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
             /*Login login = new Login();
             login.ShowDialog();*/
            
@@ -98,7 +100,7 @@ namespace ProyectoFinal
 
         private void RegistroDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rVentas registro = new rVentas();
+            rVentas registro = new rVentas(IdUsuario);
             registro.MdiParent = this;
             registro.Show();
         }
