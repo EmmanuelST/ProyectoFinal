@@ -74,6 +74,12 @@
     <Compile Include="UI\Consultas\BusquedaProducto.Designer.cs">
       <DependentUpon>BusquedaProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\cClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cClientes.Designer.cs">
+      <DependentUpon>cClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Consultas\UsuariosReportViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,12 +91,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UsuariosReport.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="UI\Consultas\cClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Consultas\cClientes.Designer.cs">
-      <DependentUpon>cClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Consultas\cUsuarios.cs">
       <SubType>Form</SubType>
@@ -174,15 +174,15 @@
     <EmbeddedResource Include="UI\Consultas\BusquedaProducto.resx">
       <DependentUpon>BusquedaProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cClientes.resx">
+      <DependentUpon>cClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\UsuariosReportViewer.resx">
       <DependentUpon>UsuariosReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\Reporte\UsuariosReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>UsuariosReport.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\cClientes.resx">
-      <DependentUpon>cClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\cUsuarios.resx">
       <DependentUpon>cUsuarios.cs</DependentUpon>

@@ -102,5 +102,12 @@ namespace ProyectoFinal
             registro.MdiParent = this;
             registro.Show();
         }
+
+        private void ConsultarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cClientes consulta = new cClientes();
+            consulta.MdiParent = this;
+            consulta.Show();
+        }
     }
 }
