@@ -43,9 +43,10 @@
             this.consultarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarAgriculturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarPesadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarPesadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,7 +141,8 @@
             this.consultarClientesToolStripMenuItem,
             this.consultarVendedoresToolStripMenuItem,
             this.consultarAgriculturesToolStripMenuItem,
-            this.consultarPesadoresToolStripMenuItem});
+            this.consultarPesadoresToolStripMenuItem,
+            this.consultarProductosToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "&Consultas";
@@ -173,6 +175,13 @@
             this.consultarAgriculturesToolStripMenuItem.Text = "Consultar &Agricultures";
             this.consultarAgriculturesToolStripMenuItem.Click += new System.EventHandler(this.ConsultarAgriculturesToolStripMenuItem_Click);
             // 
+            // consultarPesadoresToolStripMenuItem
+            // 
+            this.consultarPesadoresToolStripMenuItem.Name = "consultarPesadoresToolStripMenuItem";
+            this.consultarPesadoresToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.consultarPesadoresToolStripMenuItem.Text = "Consultar &Pesadores";
+            this.consultarPesadoresToolStripMenuItem.Click += new System.EventHandler(this.ConsultarPesadoresToolStripMenuItem_Click);
+            // 
             // mantenimientosToolStripMenuItem
             // 
             this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -188,12 +197,12 @@
             this.entradaDeProductosToolStripMenuItem.Text = "Entrada de &Productos";
             this.entradaDeProductosToolStripMenuItem.Click += new System.EventHandler(this.EntradaDeProductosToolStripMenuItem_Click);
             // 
-            // consultarPesadoresToolStripMenuItem
+            // consultarProductosToolStripMenuItem
             // 
-            this.consultarPesadoresToolStripMenuItem.Name = "consultarPesadoresToolStripMenuItem";
-            this.consultarPesadoresToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.consultarPesadoresToolStripMenuItem.Text = "Consultar &Pesadores";
-            this.consultarPesadoresToolStripMenuItem.Click += new System.EventHandler(this.ConsultarPesadoresToolStripMenuItem_Click);
+            this.consultarProductosToolStripMenuItem.Name = "consultarProductosToolStripMenuItem";
+            this.consultarProductosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.consultarProductosToolStripMenuItem.Text = "Consultar P&roductos";
+            this.consultarProductosToolStripMenuItem.Click += new System.EventHandler(this.ConsultarProductosToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -233,6 +242,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultarVendedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarAgriculturesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarPesadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarProductosToolStripMenuItem;
     }
 }
 

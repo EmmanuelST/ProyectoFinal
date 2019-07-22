@@ -130,5 +130,12 @@ namespace ProyectoFinal
             consulta.MdiParent = this;
             consulta.Show();
         }
+
+        private void ConsultarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cProductos consulta = new cProductos();
+            consulta.MdiParent = this;
+            consulta.Show();
+        }
     }
 }
