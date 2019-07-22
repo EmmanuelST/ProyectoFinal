@@ -45,9 +45,10 @@
             this.consultarAgriculturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarPesadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,7 +145,8 @@
             this.consultarAgriculturesToolStripMenuItem,
             this.consultarPesadoresToolStripMenuItem,
             this.consultarProductosToolStripMenuItem,
-            this.consultarComprasToolStripMenuItem});
+            this.consultarComprasToolStripMenuItem,
+            this.consultarVentasToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "&Consultas";
@@ -191,6 +193,13 @@
             this.consultarProductosToolStripMenuItem.Text = "Consultar P&roductos";
             this.consultarProductosToolStripMenuItem.Click += new System.EventHandler(this.ConsultarProductosToolStripMenuItem_Click);
             // 
+            // consultarComprasToolStripMenuItem
+            // 
+            this.consultarComprasToolStripMenuItem.Name = "consultarComprasToolStripMenuItem";
+            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.consultarComprasToolStripMenuItem.Text = "Consultar C&ompras";
+            this.consultarComprasToolStripMenuItem.Click += new System.EventHandler(this.ConsultarComprasToolStripMenuItem_Click);
+            // 
             // mantenimientosToolStripMenuItem
             // 
             this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -206,12 +215,12 @@
             this.entradaDeProductosToolStripMenuItem.Text = "Entrada de &Productos";
             this.entradaDeProductosToolStripMenuItem.Click += new System.EventHandler(this.EntradaDeProductosToolStripMenuItem_Click);
             // 
-            // consultarComprasToolStripMenuItem
+            // consultarVentasToolStripMenuItem
             // 
-            this.consultarComprasToolStripMenuItem.Name = "consultarComprasToolStripMenuItem";
-            this.consultarComprasToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.consultarComprasToolStripMenuItem.Text = "Consultar C&ompras";
-            this.consultarComprasToolStripMenuItem.Click += new System.EventHandler(this.ConsultarComprasToolStripMenuItem_Click);
+            this.consultarVentasToolStripMenuItem.Name = "consultarVentasToolStripMenuItem";
+            this.consultarVentasToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.consultarVentasToolStripMenuItem.Text = "Consultar V&entas";
+            this.consultarVentasToolStripMenuItem.Click += new System.EventHandler(this.ConsultarVentasToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -253,6 +262,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultarPesadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarComprasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarVentasToolStripMenuItem;
     }
 }
 
