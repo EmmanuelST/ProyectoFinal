@@ -123,5 +123,12 @@ namespace ProyectoFinal
             consulta.MdiParent = this;
             consulta.Show();
         }
+
+        private void ConsultarPesadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cPesadores consulta = new cPesadores();
+            consulta.MdiParent = this;
+            consulta.Show();
+        }
     }
 }

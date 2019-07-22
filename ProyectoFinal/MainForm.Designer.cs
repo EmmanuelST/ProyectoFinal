@@ -42,9 +42,10 @@
             this.consultarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarAgriculturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarAgriculturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarPesadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,7 +139,8 @@
             this.consultarUsuariosToolStripMenuItem,
             this.consultarClientesToolStripMenuItem,
             this.consultarVendedoresToolStripMenuItem,
-            this.consultarAgriculturesToolStripMenuItem});
+            this.consultarAgriculturesToolStripMenuItem,
+            this.consultarPesadoresToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "&Consultas";
@@ -164,6 +166,13 @@
             this.consultarVendedoresToolStripMenuItem.Text = "Consultar &Vendedores";
             this.consultarVendedoresToolStripMenuItem.Click += new System.EventHandler(this.ConsultarVendedoresToolStripMenuItem_Click);
             // 
+            // consultarAgriculturesToolStripMenuItem
+            // 
+            this.consultarAgriculturesToolStripMenuItem.Name = "consultarAgriculturesToolStripMenuItem";
+            this.consultarAgriculturesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.consultarAgriculturesToolStripMenuItem.Text = "Consultar &Agricultures";
+            this.consultarAgriculturesToolStripMenuItem.Click += new System.EventHandler(this.ConsultarAgriculturesToolStripMenuItem_Click);
+            // 
             // mantenimientosToolStripMenuItem
             // 
             this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -179,12 +188,12 @@
             this.entradaDeProductosToolStripMenuItem.Text = "Entrada de &Productos";
             this.entradaDeProductosToolStripMenuItem.Click += new System.EventHandler(this.EntradaDeProductosToolStripMenuItem_Click);
             // 
-            // consultarAgriculturesToolStripMenuItem
+            // consultarPesadoresToolStripMenuItem
             // 
-            this.consultarAgriculturesToolStripMenuItem.Name = "consultarAgriculturesToolStripMenuItem";
-            this.consultarAgriculturesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.consultarAgriculturesToolStripMenuItem.Text = "Consultar &Agricultures";
-            this.consultarAgriculturesToolStripMenuItem.Click += new System.EventHandler(this.ConsultarAgriculturesToolStripMenuItem_Click);
+            this.consultarPesadoresToolStripMenuItem.Name = "consultarPesadoresToolStripMenuItem";
+            this.consultarPesadoresToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.consultarPesadoresToolStripMenuItem.Text = "Consultar &Pesadores";
+            this.consultarPesadoresToolStripMenuItem.Click += new System.EventHandler(this.ConsultarPesadoresToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -223,6 +232,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultarClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarVendedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarAgriculturesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarPesadoresToolStripMenuItem;
     }
 }
 
