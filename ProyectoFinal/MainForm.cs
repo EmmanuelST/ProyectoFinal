@@ -109,5 +109,12 @@ namespace ProyectoFinal
             consulta.MdiParent = this;
             consulta.Show();
         }
+
+        private void ConsultarVendedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cVendedor consulta = new cVendedor();
+            consulta.MdiParent = this;
+            consulta.Show();
+        }
     }
 }
