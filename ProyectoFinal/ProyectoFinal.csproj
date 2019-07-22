@@ -74,6 +74,12 @@
     <Compile Include="UI\Consultas\BusquedaProducto.Designer.cs">
       <DependentUpon>BusquedaProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\cAgricultor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cAgricultor.Designer.cs">
+      <DependentUpon>cAgricultor.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Consultas\cClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Consultas\BusquedaProducto.resx">
       <DependentUpon>BusquedaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cAgricultor.resx">
+      <DependentUpon>cAgricultor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\cClientes.resx">
       <DependentUpon>cClientes.cs</DependentUpon>

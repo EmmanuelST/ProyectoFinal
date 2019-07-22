@@ -116,5 +116,12 @@ namespace ProyectoFinal
             consulta.MdiParent = this;
             consulta.Show();
         }
+
+        private void ConsultarAgriculturesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cAgricultor consulta = new cAgricultor();
+            consulta.MdiParent = this;
+            consulta.Show();
+        }
     }
 }

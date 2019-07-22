@@ -41,9 +41,10 @@
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarAgriculturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,7 +137,8 @@
             this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultarUsuariosToolStripMenuItem,
             this.consultarClientesToolStripMenuItem,
-            this.consultarVendedoresToolStripMenuItem});
+            this.consultarVendedoresToolStripMenuItem,
+            this.consultarAgriculturesToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "&Consultas";
@@ -144,16 +146,23 @@
             // consultarUsuariosToolStripMenuItem
             // 
             this.consultarUsuariosToolStripMenuItem.Name = "consultarUsuariosToolStripMenuItem";
-            this.consultarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.consultarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.consultarUsuariosToolStripMenuItem.Text = "Consultar &Usuarios";
             this.consultarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.ConsultarUsuariosToolStripMenuItem_Click);
             // 
             // consultarClientesToolStripMenuItem
             // 
             this.consultarClientesToolStripMenuItem.Name = "consultarClientesToolStripMenuItem";
-            this.consultarClientesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.consultarClientesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.consultarClientesToolStripMenuItem.Text = "Consultar &Clientes";
             this.consultarClientesToolStripMenuItem.Click += new System.EventHandler(this.ConsultarClientesToolStripMenuItem_Click);
+            // 
+            // consultarVendedoresToolStripMenuItem
+            // 
+            this.consultarVendedoresToolStripMenuItem.Name = "consultarVendedoresToolStripMenuItem";
+            this.consultarVendedoresToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.consultarVendedoresToolStripMenuItem.Text = "Consultar &Vendedores";
+            this.consultarVendedoresToolStripMenuItem.Click += new System.EventHandler(this.ConsultarVendedoresToolStripMenuItem_Click);
             // 
             // mantenimientosToolStripMenuItem
             // 
@@ -170,12 +179,12 @@
             this.entradaDeProductosToolStripMenuItem.Text = "Entrada de &Productos";
             this.entradaDeProductosToolStripMenuItem.Click += new System.EventHandler(this.EntradaDeProductosToolStripMenuItem_Click);
             // 
-            // consultarVendedoresToolStripMenuItem
+            // consultarAgriculturesToolStripMenuItem
             // 
-            this.consultarVendedoresToolStripMenuItem.Name = "consultarVendedoresToolStripMenuItem";
-            this.consultarVendedoresToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.consultarVendedoresToolStripMenuItem.Text = "Consultar &Vendedores";
-            this.consultarVendedoresToolStripMenuItem.Click += new System.EventHandler(this.ConsultarVendedoresToolStripMenuItem_Click);
+            this.consultarAgriculturesToolStripMenuItem.Name = "consultarAgriculturesToolStripMenuItem";
+            this.consultarAgriculturesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.consultarAgriculturesToolStripMenuItem.Text = "Consultar &Agricultures";
+            this.consultarAgriculturesToolStripMenuItem.Click += new System.EventHandler(this.ConsultarAgriculturesToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -213,6 +222,7 @@
         private System.Windows.Forms.ToolStripMenuItem registroDeVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarVendedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarAgriculturesToolStripMenuItem;
     }
 }
 
