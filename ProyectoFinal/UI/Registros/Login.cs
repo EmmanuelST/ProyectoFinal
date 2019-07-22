@@ -32,7 +32,9 @@ namespace ProyectoFinal.UI.Registros
 
             if(Log_in())
             {
+                MainForm main = new MainForm();
                 this.Dispose();
+                main.Show();
             }
             else
             {
