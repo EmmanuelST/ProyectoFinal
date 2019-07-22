@@ -1,5 +1,7 @@
 ﻿using BLL;
 using Entidades;
+using ProyectoFinal.UI.Consultas.Reporte;
+using ProyectoFinal.UI.Consultas.ReportViewers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -106,6 +108,12 @@ namespace ProyectoFinal.UI.Consultas
         private void FiltrocomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Buscar();
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            VentasReportViewer reporte = new VentasReportViewer(listado);
+            reporte.ShowDialog();
         }
     }
 }

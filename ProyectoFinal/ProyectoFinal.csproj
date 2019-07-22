@@ -116,10 +116,16 @@
     <Compile Include="UI\Consultas\cVentas.Designer.cs">
       <DependentUpon>cVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consultas\UsuariosReportViewer.cs">
+    <Compile Include="UI\Consultas\Reporte\VentasReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentasReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\UsuariosReportViewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\UsuariosReportViewer.Designer.cs">
+    <Compile Include="UI\Consultas\ReportViewers\UsuariosReportViewer.Designer.cs">
       <DependentUpon>UsuariosReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Consultas\Reporte\UsuariosReport.cs">
@@ -133,6 +139,12 @@
     </Compile>
     <Compile Include="UI\Consultas\cUsuarios.Designer.cs">
       <DependentUpon>cUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\VentasReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\VentasReportViewer.Designer.cs">
+      <DependentUpon>VentasReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\Login.cs">
       <SubType>Form</SubType>
@@ -231,7 +243,11 @@
     <EmbeddedResource Include="UI\Consultas\cVentas.resx">
       <DependentUpon>cVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\UsuariosReportViewer.resx">
+    <EmbeddedResource Include="UI\Consultas\Reporte\VentasReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VentasReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ReportViewers\UsuariosReportViewer.resx">
       <DependentUpon>UsuariosReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\Reporte\UsuariosReport.rpt">
@@ -240,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\cUsuarios.resx">
       <DependentUpon>cUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ReportViewers\VentasReportViewer.resx">
+      <DependentUpon>VentasReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
