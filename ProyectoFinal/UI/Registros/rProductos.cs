@@ -14,9 +14,11 @@ namespace ProyectoFinal.UI.Registros
 {
     public partial class rProductos : Form
     {
-        public rProductos()
+        private int IdUsuario;
+        public rProductos(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
         }
 
         
@@ -96,6 +98,7 @@ namespace ProyectoFinal.UI.Registros
                 producto.Precio = PrecionumericUpDown.Value;
                 producto.Existencia = decimal.Parse(ExistenciatextBox.Text);
                 producto.Observacion = ObservaciontextBox.Text;
+                producto.IdUsuario = IdUsuario;
 
             }
             catch(Exception)

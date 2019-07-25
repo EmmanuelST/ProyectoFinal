@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using Entidades.View;
 using ProyectoFinal.UI.Consultas;
 using System;
 using System.Collections.Generic;
@@ -16,18 +17,21 @@ namespace ProyectoFinal.UI
     public partial class rVentas : Form
     {
         private List<VentaDetalles> Detalles;
+        private List<ProductosView> DetallesView;
         private int IdUsuario;
         public rVentas(int IdUsuario)
         {
             InitializeComponent();
             this.IdUsuario = IdUsuario;
             Detalles = new List<VentaDetalles>();
+            DetallesView = new List<ProductosView>();
+            Limpiar();
         }
 
         private void CargarGrip()
         {
             DetalledataGridView.DataSource = null;
-            DetalledataGridView.DataSource = this.Detalles;
+            DetalledataGridView.DataSource = this.DetallesView;
             //DetalledataGridView.Refresh();
         }
 
@@ -35,12 +39,20 @@ namespace ProyectoFinal.UI
         {
             decimal total = 0;
 
+            
             foreach(var item in Detalles)
             {
                 total += item.SubTotal;
             }
 
-            TotaltextBox.Text = total.ToString();
+
+            if(TipoVentacomboBox.SelectedIndex == 0)
+                TotaltextBox.Text = total.ToString();
+            else
+            {
+                total = total * ((InteresnumericUpDown.Value / 100) + 1);
+                TotaltextBox.Text = total.ToString();
+            }
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -63,8 +75,11 @@ namespace ProyectoFinal.UI
             NombreProductotextBox.Text = string.Empty;
             ProductoCantidadnumericUpDown.Value = 0;
             Detalles = new List<VentaDetalles>();
+            ActualizaLista();
             CargarGrip();
             RefreshTotal();
+            InteresnumericUpDown.Enabled = false;
+            HastadateTimePicker.Enabled = false;
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
@@ -191,12 +206,7 @@ namespace ProyectoFinal.UI
 
             }
 
-            if(TipoVentacomboBox.SelectedIndex == 0)
-            {
-                paso = false;
-                errorProvider.SetError(TipoVentacomboBox,"Debe seleccionar un tipo de venta");
-
-            }
+            
 
             if(TipoVentacomboBox.SelectedIndex == 2)
             {
@@ -251,7 +261,9 @@ namespace ProyectoFinal.UI
         {
             try
             {
-                NombreProductotextBox.Text = BuscarProducto().Descripcion;
+                Productos productos = BuscarProducto();
+                NombreProductotextBox.Text = productos.Descripcion;
+                ExistenciatextBox.Text = productos.Existencia.ToString();
             }
             catch (Exception) { }
             
@@ -287,11 +299,45 @@ namespace ProyectoFinal.UI
                 detalle.CalularSubTotal();
 
                 Detalles.Add(detalle);
+                ActualizaLista();
+                
                 CargarGrip();
 
                 RefreshTotal();
             }
             
+        }
+
+        private void ActualizaLista()
+        {
+            RepositorioBase<Productos> db = new RepositorioBase<Productos>();
+            DetallesView = new List<ProductosView>();
+            Productos producto = new Productos();
+            try
+            {
+                foreach(var item in Detalles)
+                {
+                    producto = db.Buscar(item.IdProducto);
+                    ProductosView view = new ProductosView()
+                    {
+                        IdProducto = producto.IdProductos,
+                        Cantidad = item.Cantidad,
+                        Descripcion = producto.Descripcion,
+                        Precio = item.Precio
+
+                    };
+                    view.CalcularTotal();
+                    DetallesView.Add(view);
+
+                }
+
+
+
+            }catch(Exception)
+            {
+
+            }
+
         }
 
         private void EliminarFilabutton_Click(object sender, EventArgs e)
@@ -302,6 +348,7 @@ namespace ProyectoFinal.UI
                 if(Detalles.Count > 0)
                 {
                     Detalles.RemoveAt(DetalledataGridView.CurrentRow.Index);
+                    ActualizaLista();
                     CargarGrip();
                     RefreshTotal();
                 }
@@ -357,6 +404,7 @@ namespace ProyectoFinal.UI
             InteresnumericUpDown.Value = venta.TasaInteres;
             HastadateTimePicker.Value = venta.HastaFecha;
             Detalles = venta.Detalles;
+            ActualizaLista();
             CargarGrip();
             RefreshTotal();
 
@@ -383,6 +431,22 @@ namespace ProyectoFinal.UI
             {
                 throw;
             }
+        }
+
+        private void TipoVentacomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if((int)TipoVentacomboBox.SelectedIndex == 1)
+            {
+                InteresnumericUpDown.Enabled = true;
+                HastadateTimePicker.Enabled = true;
+            }
+            else
+            {
+                InteresnumericUpDown.Enabled = false;
+                HastadateTimePicker.Enabled = false;
+            }
+
+            RefreshTotal();
         }
     }
 }

@@ -14,9 +14,11 @@ namespace ProyectoFinal.UI
 {
     public partial class rPesador : Form
     {
-        public rPesador()
+        private int IdUsuario;
+        public rPesador(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -94,6 +96,7 @@ namespace ProyectoFinal.UI
             pesador.Celular = CelulartextBox.Text;
             pesador.FechaCreacion = FechaRegistrodateTimePicker.Value;
             pesador.FechaNacimiento = FechaNacimientodateTimePicker.Value;
+            pesador.IdUsuario = IdUsuario;
            
 
             return pesador;

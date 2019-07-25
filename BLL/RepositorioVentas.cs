@@ -19,6 +19,7 @@ namespace BLL
             db = new Contexto();
             bool paso = false;
             RepositorioBase<Productos> dbP = new RepositorioBase<Productos>();
+            RepositorioBase<Clientes> dbC = new RepositorioBase<Clientes>();
             Productos producto = new Productos();
             
             foreach(var item in entity.Detalles)
@@ -26,6 +27,14 @@ namespace BLL
                 producto = dbP.Buscar(item.IdProducto);
                 producto.Existencia -= item.Cantidad;
                 dbP.Modificar(producto);
+
+            }
+
+            if(entity.TipoVeta == TiposVentas.Credito)
+            {
+                Clientes cliente = dbC.Buscar(entity.IdCliente);
+                cliente.Balance += entity.Total;
+                dbC.Modificar(cliente);
 
             }
 
@@ -73,10 +82,22 @@ namespace BLL
             Contexto db2 = new Contexto();
             RepositorioBase<Productos> dbP = new RepositorioBase<Productos>();
             RepositorioBase<VentaDetalles> dbV = new RepositorioBase<VentaDetalles>();
+            RepositorioBase<Clientes> dbC = new RepositorioBase<Clientes>(); 
 
             try
             {
                 var temp = db2.Venta.Find(entity.IdVenta);
+                Clientes clientes = dbC.Buscar(temp.IdCliente);
+                clientes.Balance -= temp.Total;
+                if (entity.TipoVeta == TiposVentas.Credito)
+                {
+                    Clientes cliente = dbC.Buscar(entity.IdCliente);
+                    cliente.Balance += entity.Total;
+                    dbC.Modificar(cliente);
+
+                }
+
+                dbC.Modificar(clientes);
 
                 foreach(var item in temp.Detalles)
                 {
@@ -125,12 +146,15 @@ namespace BLL
             db = new Contexto();
             RepositorioBase<Productos> dbP = new RepositorioBase<Productos>();
             RepositorioBase<VentaDetalles> dbV = new RepositorioBase<VentaDetalles>();
+            RepositorioBase<Clientes> dbC = new RepositorioBase<Clientes>();
 
             try
             {
                 Ventas eliminar = db.Venta.Find(id);
-                
-                
+                Clientes clientes = dbC.Buscar(eliminar.IdCliente);
+                clientes.Balance -= eliminar.Total;
+                dbC.Modificar(clientes);
+
 
                 if (eliminar != null)
                 {

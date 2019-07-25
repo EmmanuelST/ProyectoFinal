@@ -14,9 +14,11 @@ namespace ProyectoFinal.UI.Registros
 {
     public partial class rVendedor : Form
     {
-        public rVendedor()
+        private int IdUsuario;
+        public rVendedor(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -94,6 +96,7 @@ namespace ProyectoFinal.UI.Registros
             vendedor.Celular = CelulartextBox.Text;
             vendedor.FechaCreacion = FechaRegistrodateTimePicker.Value;
             vendedor.FechaNacimiento = FechaNacimientodateTimePicker.Value;
+            vendedor.IdUsuario = IdUsuario;
 
 
             return vendedor;

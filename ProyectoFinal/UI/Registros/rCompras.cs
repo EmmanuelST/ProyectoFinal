@@ -14,9 +14,11 @@ namespace ProyectoFinal.UI
 {
     public partial class rCompras : Form
     {
-        public rCompras()
+        private int IdUsuario;
+        public rCompras(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -102,6 +104,7 @@ namespace ProyectoFinal.UI
             compra.PrecioFanegas =  PrecionumericUpDown.Value;
             compra.CantidadSacos =  CantidadSacosnumericUpDown.Value;
             compra.Total = decimal.Parse(TotaltextBox.Text);
+            compra.IdUsuario = IdUsuario;
 
             return compra;
         }

@@ -51,28 +51,28 @@ namespace ProyectoFinal
 
         private void RegistrarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rCliente registro = new rCliente();
+            rCliente registro = new rCliente(IdUsuario);
             registro.MdiParent = this;
             registro.Show();
         }
 
         private void RegistrarPesadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rPesador registro = new rPesador();
+            rPesador registro = new rPesador(IdUsuario);
             registro.MdiParent = this;
             registro.Show();
         }
 
         private void RegistroDeVendedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rVendedor registro = new rVendedor();
+            rVendedor registro = new rVendedor(IdUsuario);
             registro.MdiParent = this;
             registro.Show();
         }
 
         private void RegistroDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rProductos registro = new rProductos();
+            rProductos registro = new rProductos(IdUsuario);
             registro.MdiParent = this;
             registro.Show();
         }
@@ -86,14 +86,14 @@ namespace ProyectoFinal
 
         private void RegistroDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rCompras registro = new rCompras();
+            rCompras registro = new rCompras(IdUsuario);
             registro.MdiParent = this;
             registro.Show();
         }
 
         private void RegistroDeAgricultoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rAgricultor registro = new rAgricultor();
+            rAgricultor registro = new rAgricultor(IdUsuario);
             registro.MdiParent = this;
             registro.Show();
         }

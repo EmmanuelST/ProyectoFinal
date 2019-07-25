@@ -14,9 +14,11 @@ namespace ProyectoFinal.UI.Registros
 {
     public partial class rAgricultor : Form
     {
-        public rAgricultor()
+        private int IdUsuario;
+        public rAgricultor(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -95,6 +97,7 @@ namespace ProyectoFinal.UI.Registros
             agricultor.Celular = CelulartextBox.Text;
             agricultor.FechaCreacion = FechaRegistrodateTimePicker.Value;
             agricultor.FechaNacimiento = FechaNacimientodateTimePicker.Value;
+            agricultor.IdUsuario = IdUsuario;
             try
             {
                 agricultor.Balance = decimal.Parse(BalancetextBox.Text);

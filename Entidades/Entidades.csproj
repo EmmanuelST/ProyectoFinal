@@ -48,12 +48,12 @@
     <Compile Include="Pesadores.cs" />
     <Compile Include="Productos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipoVentas.cs" />
     <Compile Include="Usuarios.cs" />
     <Compile Include="Compras.cs" />
     <Compile Include="Vendedores.cs" />
     <Compile Include="VentaDetalles.cs" />
     <Compile Include="Ventas.cs" />
+    <Compile Include="View\ProductosView.cs" />
     <Compile Include="View\VentasView.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

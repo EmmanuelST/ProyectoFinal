@@ -14,9 +14,11 @@ namespace ProyectoFinal.UI
 {
     public partial class rCliente : Form
     {
-        public rCliente()
+        private int IdUsuario;
+        public rCliente(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
@@ -141,6 +143,7 @@ namespace ProyectoFinal.UI
             cliente.FechaNacimiento = FechaNacimientodateTimePicker.Value;
             cliente.LimiteCredito = LimiteCreditonumericUpDown.Value ;
             cliente.LimiteVenta =  LimiteVentasnumericUpDown.Value;
+            cliente.IdUsuario = IdUsuario;
             //cliente.Balance =  BalancetextBox.Text;
 
             return cliente;
