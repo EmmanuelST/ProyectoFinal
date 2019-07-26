@@ -25,6 +25,7 @@ namespace Entidades
         public TiposVentas TipoVeta { get; set; }
         public decimal TasaInteres { get; set; }
         public DateTime HastaFecha { get; set; }
+        public decimal Balance { get; set; }
         public virtual List<VentaDetalles> Detalles { get; set; }
 
         public Ventas()

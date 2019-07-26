@@ -1,7 +1,9 @@
-﻿using System;
+﻿using PhoneNumbers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Entidades
@@ -29,6 +31,28 @@ namespace Entidades
             Telefono = string.Empty;
             FechaCreacion = DateTime.Now;
             IdUsuario = 0;
+        }
+
+        public static bool ValidarCedula(string cedula)
+        {
+            
+            String regex = "^\\d{3}\\D?\\d{7}\\D?\\d$";
+
+            if (Regex.IsMatch(cedula, regex))
+                    return true;
+
+            return false;
+        }
+
+        public static bool ValidarTelefono(string numero)
+        {
+            if (numero.Length == 10)
+                return true;
+            if (numero.Length == 12)
+                return true;
+
+
+            return false;
         }
     }
 }

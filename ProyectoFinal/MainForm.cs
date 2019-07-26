@@ -157,7 +157,9 @@ namespace ProyectoFinal
         private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Login login = new Login();
+            Dispose();
             login.ShowDialog();
+            
         }
     }
 }

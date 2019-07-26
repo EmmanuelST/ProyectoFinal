@@ -149,6 +149,11 @@ namespace ProyectoFinal.UI.Registros
                 errorProvider.SetError(FechaNacimientodateTimePicker, "La fecha no puede ser mayor que la de hoy");
             }
 
+            if (!Personas.ValidarCedula(CedulatextBox.Text.Trim()))
+            {
+                paso = false;
+                errorProvider.SetError(CedulatextBox, "Esta cedula no es valida");
+            }
 
 
             return paso;

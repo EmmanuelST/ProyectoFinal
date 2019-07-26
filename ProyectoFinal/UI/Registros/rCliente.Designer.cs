@@ -43,6 +43,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.CelulartextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.FechaNacimientodateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,8 +59,6 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.FechaNacimientodateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -190,6 +190,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             // 
+            // FechaNacimientodateTimePicker
+            // 
+            this.FechaNacimientodateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechaNacimientodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaNacimientodateTimePicker.Location = new System.Drawing.Point(122, 264);
+            this.FechaNacimientodateTimePicker.Name = "FechaNacimientodateTimePicker";
+            this.FechaNacimientodateTimePicker.Size = new System.Drawing.Size(184, 20);
+            this.FechaNacimientodateTimePicker.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 267);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Fecha de Nacimiento:";
+            // 
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
@@ -258,6 +276,11 @@
             // 
             this.LimiteVentasnumericUpDown.DecimalPlaces = 2;
             this.LimiteVentasnumericUpDown.Location = new System.Drawing.Point(103, 43);
+            this.LimiteVentasnumericUpDown.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
             this.LimiteVentasnumericUpDown.Name = "LimiteVentasnumericUpDown";
             this.LimiteVentasnumericUpDown.Size = new System.Drawing.Size(203, 20);
             this.LimiteVentasnumericUpDown.TabIndex = 6;
@@ -275,6 +298,11 @@
             // 
             this.LimiteCreditonumericUpDown.DecimalPlaces = 2;
             this.LimiteCreditonumericUpDown.Location = new System.Drawing.Point(103, 17);
+            this.LimiteCreditonumericUpDown.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
             this.LimiteCreditonumericUpDown.Name = "LimiteCreditonumericUpDown";
             this.LimiteCreditonumericUpDown.Size = new System.Drawing.Size(203, 20);
             this.LimiteCreditonumericUpDown.TabIndex = 4;
@@ -331,24 +359,6 @@
             // 
             this.errorProvider.ContainerControl = this;
             this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
-            // 
-            // FechaNacimientodateTimePicker
-            // 
-            this.FechaNacimientodateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.FechaNacimientodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaNacimientodateTimePicker.Location = new System.Drawing.Point(122, 264);
-            this.FechaNacimientodateTimePicker.Name = "FechaNacimientodateTimePicker";
-            this.FechaNacimientodateTimePicker.Size = new System.Drawing.Size(184, 20);
-            this.FechaNacimientodateTimePicker.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 267);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Fecha de Nacimiento:";
             // 
             // rCliente
             // 

@@ -48,7 +48,7 @@ namespace ProyectoFinal.UI
             if (!Validar())
                 return;
 
-            RepositorioBase<Compras> db = new RepositorioBase<Compras>();
+            RepositorioCompras db = new RepositorioCompras();
             Compras compra = LlenarClase();
 
             try
@@ -169,7 +169,7 @@ namespace ProyectoFinal.UI
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
 
-            RepositorioBase<Compras> db = new RepositorioBase<Compras>();
+            RepositorioCompras db = new RepositorioCompras();
 
             try
             {
@@ -193,7 +193,7 @@ namespace ProyectoFinal.UI
 
         private void BuscarComprabutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Compras> db = new RepositorioBase<Compras>();
+            RepositorioCompras db = new RepositorioCompras();
 
             try
             {
@@ -277,12 +277,19 @@ namespace ProyectoFinal.UI
             try
             {
                 Agricultores agricultor = db.Buscar((int)IdAgricultornumericUpDown.Value);
-                NombreAgricultortextBox.Text = agricultor.Nombre;
+                if(agricultor != null)
+                    NombreAgricultortextBox.Text = agricultor.Nombre;
+                else
+                {
+                    NombreAgricultortextBox.Text = string.Empty;
+                   // MessageBox.Show("No se encontro el Agricultor", "!!Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                    
 
             }
             catch(Exception)
             {
-                
+                //MessageBox.Show("No se encontro el Agricultor","!!Atencion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
             
         }
@@ -294,10 +301,16 @@ namespace ProyectoFinal.UI
             {
 
                 Pesadores pesador = db.Buscar((int)IdPesadornumericUpDown.Value);
-                NombrePesadortextBox.Text = pesador.Nombre;
+                if(pesador != null)
+                    NombrePesadortextBox.Text = pesador.Nombre;
+                else
+                {
+                    NombrePesadortextBox.Text = string.Empty;
+                }
             }
             catch (Exception)
             {
+                //MessageBox.Show("No se encontro el Pesador", "!!Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }

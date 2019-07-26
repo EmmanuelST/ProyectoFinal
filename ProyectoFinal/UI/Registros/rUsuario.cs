@@ -22,6 +22,7 @@ namespace ProyectoFinal.UI
         private bool Validar()
         {
             bool paso = true;
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
 
             errorProvider.Clear();
 
@@ -48,6 +49,17 @@ namespace ProyectoFinal.UI
                 paso = false;
                 errorProvider.SetError(NivelnumericUpDown,"Debe fijar un nivel para el usuario");
             }
+
+            try
+            {
+                if(db.Repetido(U=> U.Usuario.Equals(UsuariotextBox.Text.Trim())))
+                {
+                    paso = false;
+                    errorProvider.SetError(UsuariotextBox, "Este Usuario ya esta ocupado");
+                }
+
+            }
+            catch (Exception) { }
 
 
 

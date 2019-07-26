@@ -125,6 +125,12 @@ namespace ProyectoFinal.UI
                 errorProvider.SetError(LimiteVentasnumericUpDown, "Debe fijar un limite de credito");
             }
 
+            if(!Clientes.ValidarCedula(CedulatextBox.Text.Trim()))
+            {
+                paso = false;
+                errorProvider.SetError(CedulatextBox,"Esta cedula no es valida");
+            }
+
 
             return paso;
         }

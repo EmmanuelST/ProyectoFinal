@@ -43,8 +43,6 @@
             this.HumedadnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.PesoNetonumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Pesadorbutton = new System.Windows.Forms.Button();
-            this.BuscarAgricultorbutton = new System.Windows.Forms.Button();
             this.BuscarComprabutton = new System.Windows.Forms.Button();
             this.NombrePesadortextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -87,8 +85,6 @@
             this.groupBox1.Controls.Add(this.HumedadnumericUpDown);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.PesoNetonumericUpDown);
-            this.groupBox1.Controls.Add(this.Pesadorbutton);
-            this.groupBox1.Controls.Add(this.BuscarAgricultorbutton);
             this.groupBox1.Controls.Add(this.BuscarComprabutton);
             this.groupBox1.Controls.Add(this.NombrePesadortextBox);
             this.groupBox1.Controls.Add(this.label6);
@@ -139,6 +135,7 @@
             // 
             // CantidadSacosnumericUpDown
             // 
+            this.CantidadSacosnumericUpDown.DecimalPlaces = 2;
             this.CantidadSacosnumericUpDown.Location = new System.Drawing.Point(396, 146);
             this.CantidadSacosnumericUpDown.Maximum = new decimal(new int[] {
             999999,
@@ -160,6 +157,7 @@
             // 
             // PrecionumericUpDown
             // 
+            this.PrecionumericUpDown.DecimalPlaces = 2;
             this.PrecionumericUpDown.Location = new System.Drawing.Point(396, 111);
             this.PrecionumericUpDown.Maximum = new decimal(new int[] {
             99999999,
@@ -199,6 +197,7 @@
             // 
             // HumedadnumericUpDown
             // 
+            this.HumedadnumericUpDown.DecimalPlaces = 2;
             this.HumedadnumericUpDown.Location = new System.Drawing.Point(396, 49);
             this.HumedadnumericUpDown.Maximum = new decimal(new int[] {
             999999,
@@ -231,32 +230,6 @@
             this.PesoNetonumericUpDown.Size = new System.Drawing.Size(130, 20);
             this.PesoNetonumericUpDown.TabIndex = 18;
             this.PesoNetonumericUpDown.ValueChanged += new System.EventHandler(this.PesoNetonumericUpDown_ValueChanged);
-            // 
-            // Pesadorbutton
-            // 
-            this.Pesadorbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.Pesadorbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Pesadorbutton.Location = new System.Drawing.Point(194, 138);
-            this.Pesadorbutton.Name = "Pesadorbutton";
-            this.Pesadorbutton.Size = new System.Drawing.Size(75, 23);
-            this.Pesadorbutton.TabIndex = 17;
-            this.Pesadorbutton.Text = "Buscar";
-            this.Pesadorbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Pesadorbutton.UseVisualStyleBackColor = true;
-            this.Pesadorbutton.Click += new System.EventHandler(this.Pesadorbutton_Click);
-            // 
-            // BuscarAgricultorbutton
-            // 
-            this.BuscarAgricultorbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.BuscarAgricultorbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BuscarAgricultorbutton.Location = new System.Drawing.Point(195, 76);
-            this.BuscarAgricultorbutton.Name = "BuscarAgricultorbutton";
-            this.BuscarAgricultorbutton.Size = new System.Drawing.Size(75, 23);
-            this.BuscarAgricultorbutton.TabIndex = 16;
-            this.BuscarAgricultorbutton.Text = "Buscar";
-            this.BuscarAgricultorbutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarAgricultorbutton.UseVisualStyleBackColor = true;
-            this.BuscarAgricultorbutton.Click += new System.EventHandler(this.BuscarAgricultorbutton_Click);
             // 
             // BuscarComprabutton
             // 
@@ -297,7 +270,7 @@
             0,
             0});
             this.IdPesadornumericUpDown.Name = "IdPesadornumericUpDown";
-            this.IdPesadornumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.IdPesadornumericUpDown.Size = new System.Drawing.Size(197, 20);
             this.IdPesadornumericUpDown.TabIndex = 10;
             this.IdPesadornumericUpDown.ValueChanged += new System.EventHandler(this.IdPesadornumericUpDown_ValueChanged);
             // 
@@ -336,7 +309,7 @@
             0,
             0});
             this.IdAgricultornumericUpDown.Name = "IdAgricultornumericUpDown";
-            this.IdAgricultornumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.IdAgricultornumericUpDown.Size = new System.Drawing.Size(197, 20);
             this.IdAgricultornumericUpDown.TabIndex = 6;
             this.IdAgricultornumericUpDown.ValueChanged += new System.EventHandler(this.IdAgricultornumericUpDown_ValueChanged);
             // 
@@ -464,8 +437,6 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button Pesadorbutton;
-        private System.Windows.Forms.Button BuscarAgricultorbutton;
         private System.Windows.Forms.Button BuscarComprabutton;
         private System.Windows.Forms.TextBox NombrePesadortextBox;
         private System.Windows.Forms.Label label6;

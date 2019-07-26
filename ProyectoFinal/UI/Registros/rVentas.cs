@@ -208,7 +208,7 @@ namespace ProyectoFinal.UI
 
             
 
-            if(TipoVentacomboBox.SelectedIndex == 2)
+            if(TipoVentacomboBox.SelectedIndex == 1)
             {
               
                 if(InteresnumericUpDown.Value == 0)
@@ -217,7 +217,7 @@ namespace ProyectoFinal.UI
                     errorProvider.SetError(InteresnumericUpDown,"Este campo no puede ser cero, debe fijar un porcentaje de interes");
                 }
 
-                if(HastadateTimePicker.Value == DateTime.Now)
+                if(HastadateTimePicker.Value.Date == DateTime.Now.Date)
                 {
                     paso = false;
                     errorProvider.SetError(HastadateTimePicker, "La fecha de hasta no puede ser la misma de hoy");
@@ -262,8 +262,17 @@ namespace ProyectoFinal.UI
             try
             {
                 Productos productos = BuscarProducto();
-                NombreProductotextBox.Text = productos.Descripcion;
-                ExistenciatextBox.Text = productos.Existencia.ToString();
+                if(productos != null)
+                {
+                    NombreProductotextBox.Text = productos.Descripcion;
+                    ExistenciatextBox.Text = productos.Existencia.ToString();
+                }
+                else
+                {
+                    NombreProductotextBox.Text = string.Empty;
+                    ExistenciatextBox.Text = string.Empty;
+                }
+                
             }
             catch (Exception) { }
             
@@ -273,6 +282,7 @@ namespace ProyectoFinal.UI
         {
 
             errorProvider.Clear();
+
             if(string.IsNullOrWhiteSpace(NombreProductotextBox.Text))
             {
                 errorProvider.SetError(NombreProductotextBox,"Debe seleccionar un producto");
@@ -284,6 +294,8 @@ namespace ProyectoFinal.UI
                 errorProvider.SetError(ProductoCantidadnumericUpDown,"La cantidad debe ser mayor que cero");
                 return;
             }
+
+            
 
             Productos producto;
             if ((producto = BuscarProducto())!= null)
@@ -297,6 +309,18 @@ namespace ProyectoFinal.UI
                 };
 
                 detalle.CalularSubTotal();
+
+                if (ProductoCantidadnumericUpDown.Value > producto.Existencia)
+                {
+                    errorProvider.SetError(ExistenciatextBox,"No hay sufieciente existencia");
+                    return;
+                }
+
+                    if (Detalles.Any(P => P.IdProducto == detalle.IdProducto))
+                {
+                    errorProvider.SetError(NombreProductotextBox,"Este producto ya esta agregado");
+                    return;
+                }
 
                 Detalles.Add(detalle);
                 ActualizaLista();
