@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,6 +20,7 @@ namespace ProyectoFinal.UI
         {
             InitializeComponent();
             this.IdUsuario = IdUsuario;
+            
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -94,17 +96,22 @@ namespace ProyectoFinal.UI
         {
             Compras compra = new Compras();
 
-            compra.IdCompra = (int) IdCompranumericUpDown.Value;
-            compra.Fecha =  FechadateTimePicker.Value;
-            compra.IdAgricultor = (int) IdAgricultornumericUpDown.Value;
-            compra.IdPesador = (int) IdPesadornumericUpDown.Value;
-            compra.PesoNeto =  PesoNetonumericUpDown.Value;
-            compra.Humedad = HumedadnumericUpDown.Value;
-            compra.TotalFanegas = decimal.Parse(FanegastextBox.Text);
-            compra.PrecioFanegas =  PrecionumericUpDown.Value;
-            compra.CantidadSacos =  CantidadSacosnumericUpDown.Value;
-            compra.Total = decimal.Parse(TotaltextBox.Text);
-            compra.IdUsuario = IdUsuario;
+            try
+            {
+                compra.IdCompra = (int)IdCompranumericUpDown.Value;
+                compra.Fecha = FechadateTimePicker.Value;
+                compra.IdAgricultor = (int)IdAgricultornumericUpDown.Value;
+                compra.IdPesador = (int)IdPesadornumericUpDown.Value;
+                compra.PesoNeto = PesoNetonumericUpDown.Value;
+                compra.Humedad = HumedadnumericUpDown.Value;
+                compra.TotalFanegas = PesoNetonumericUpDown.Value / HumedadnumericUpDown.Value;
+                compra.PrecioFanegas = PrecionumericUpDown.Value;
+                compra.CantidadSacos = CantidadSacosnumericUpDown.Value;
+                compra.Total = decimal.Parse(TotaltextBox.Text);
+                compra.IdUsuario = IdUsuario;
+            }
+            catch (Exception) { }
+            
 
             return compra;
         }
@@ -161,6 +168,8 @@ namespace ProyectoFinal.UI
                 paso = false;
                 errorProvider.SetError(CantidadSacosnumericUpDown,"Este campor no puede ser cero");
             }
+
+            
 
 
             return paso;
@@ -318,6 +327,7 @@ namespace ProyectoFinal.UI
         private void IdAgricultornumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             BuscarArgricultor();
+            VerificarArroz();
         }
 
         private void IdPesadornumericUpDown_ValueChanged(object sender, EventArgs e)
@@ -333,6 +343,24 @@ namespace ProyectoFinal.UI
         private void Pesadorbutton_Click(object sender, EventArgs e)
         {
             BuscarPesador();
+        }
+
+        private void VerificarArroz()
+        {
+           
+            RepositorioBase<Productos> db = new RepositorioBase<Productos>();
+            try
+            {
+                if (!db.Repetido(P => P.Descripcion.Equals("Arroz Cascara")))
+                {
+                    MessageBox.Show("El producto Arroz Cascara no existe, Debe crearlo antes de comprar", "!!Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    this.Close();
+                }
+                
+            }
+            catch (Exception) { }
+
+            return;
         }
     }
 }
