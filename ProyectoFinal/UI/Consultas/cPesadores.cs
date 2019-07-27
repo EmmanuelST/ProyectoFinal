@@ -23,10 +23,7 @@ namespace ProyectoFinal.UI.Consultas
             Buscar();
         }
 
-        private void Buscarbutton_Click(object sender, EventArgs e)
-        {
-            Buscar();
-        }
+       
 
         private void Buscar()
         {
@@ -83,7 +80,6 @@ namespace ProyectoFinal.UI.Consultas
             ConsultadataGridView.DataSource = listado;
         }
 
-
         private void FechacheckBox_CheckedChanged(object sender, EventArgs e)
         {
             Buscar();
@@ -105,6 +101,11 @@ namespace ProyectoFinal.UI.Consultas
         }
 
         private void FiltrocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
         {
             Buscar();
         }

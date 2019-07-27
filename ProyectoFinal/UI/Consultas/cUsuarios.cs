@@ -23,11 +23,7 @@ namespace ProyectoFinal.UI.Consultas
             Buscar();
         }
 
-        private void Buscarbutton_Click(object sender, EventArgs e)
-        {
-            Buscar();
-        }
-
+        
         private void Buscar()
         {
             listado = new List<Usuarios>();
@@ -83,6 +79,10 @@ namespace ProyectoFinal.UI.Consultas
             ConsultadataGridView.DataSource = listado;
         }
 
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            Buscar();
+        }
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
             UsuariosReportViewer reporte = new UsuariosReportViewer(listado);
@@ -113,5 +113,7 @@ namespace ProyectoFinal.UI.Consultas
         {
             Buscar();
         }
+
+
     }
 }

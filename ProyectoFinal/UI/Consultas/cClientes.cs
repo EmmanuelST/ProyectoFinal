@@ -23,11 +23,6 @@ namespace ProyectoFinal.UI.Consultas
             Buscar();
         }
 
-        private void Buscarbutton_Click(object sender, EventArgs e)
-        {
-            Buscar();
-        }
-
         private void Buscar()
         {
             listado = new List<Clientes>();
@@ -104,6 +99,11 @@ namespace ProyectoFinal.UI.Consultas
         }
 
         private void FiltrocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void Buscarbutton_Click_1(object sender, EventArgs e)
         {
             Buscar();
         }
