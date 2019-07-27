@@ -19,6 +19,7 @@ namespace ProyectoFinal.UI.Registros
         {
             InitializeComponent();
             this.IdUsuario = IdUsuario;
+            Limpiar();
         }
 
         
@@ -32,7 +33,7 @@ namespace ProyectoFinal.UI.Registros
         {
             IdnumericUpDown.Value = 0;
             DescripciontextBox.Text = string.Empty;
-            UnidadMedidacomboBox.SelectedIndex = 1;
+            UnidadMedidacomboBox.SelectedIndex = 0;
             CostonumericUpDown.Value = 0;
             PrecionumericUpDown.Value = 0;
             ExistenciatextBox.Text = "0";

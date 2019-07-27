@@ -75,6 +75,7 @@ namespace ProyectoFinal.UI
             NombreProductotextBox.Text = string.Empty;
             ProductoCantidadnumericUpDown.Value = 0;
             Detalles = new List<VentaDetalles>();
+            ComentariotextBox.Text = string.Empty;
             ActualizaLista();
             CargarGrip();
             RefreshTotal();
@@ -89,6 +90,33 @@ namespace ProyectoFinal.UI
 
             RepositorioVentas db = new RepositorioVentas();
             Ventas venta = LlenarClase();
+
+            try
+            {
+                RepositorioBase<Clientes> dbC = new RepositorioBase<Clientes>();
+                var cliente = dbC.Buscar((int)IdClientenumericUpDown.Value);
+
+                if(TipoVentacomboBox.SelectedIndex == (int)TiposVentas.Contado)
+                {
+                    if(cliente.LimiteVenta < decimal.Parse(TotaltextBox.Text))
+                    {
+                        MessageBox.Show("Este cliente no tiene permitido comprar tanto");
+                        return;
+                    }
+                }
+                else
+                    if (TipoVentacomboBox.SelectedIndex == (int)TiposVentas.Credito)
+                    {
+                        if (cliente.LimiteCredito < decimal.Parse(TotaltextBox.Text))
+                        {
+                            MessageBox.Show("Este cliente no tiene permitido comprar tanto a credito");
+                            return;
+                        }
+                    }
+
+
+            }
+            catch (Exception) { }
 
             try
             {
@@ -164,6 +192,7 @@ namespace ProyectoFinal.UI
             venta.HastaFecha = HastadateTimePicker.Value;
             venta.Detalles = Detalles;
             venta.IdUsuario = IdUsuario;
+            venta.Comentario = ComentariotextBox.Text.Trim();
             RefreshTotal();
             try
             {
@@ -428,6 +457,7 @@ namespace ProyectoFinal.UI
             InteresnumericUpDown.Value = venta.TasaInteres;
             HastadateTimePicker.Value = venta.HastaFecha;
             Detalles = venta.Detalles;
+            ComentariotextBox.Text = venta.Comentario;
             ActualizaLista();
             CargarGrip();
             RefreshTotal();

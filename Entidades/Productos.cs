@@ -10,10 +10,9 @@ namespace Entidades
 
     public enum UnidadesMedidas : int
     {
-        Nada = 0,
-        Libras = 1,
-        Sacos = 2,
-        Fanegas = 3
+        Libras = 0,
+        Sacos = 1,
+        Fanegas = 2
     }
     public class Productos
     {
@@ -33,7 +32,7 @@ namespace Entidades
             IdProductos = 0;
             Descripcion = string.Empty;
             Existencia = 0;
-            UnidadMedida = UnidadesMedidas.Nada;
+            UnidadMedida = UnidadesMedidas.Fanegas;
             Costo = 0;
             Precio = 0;
             Observacion = string.Empty;

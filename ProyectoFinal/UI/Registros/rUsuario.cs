@@ -14,9 +14,19 @@ namespace ProyectoFinal.UI
 {
     public partial class rUsuario : Form
     {
-        public rUsuario()
+        private int IdUsuario;
+        public rUsuario(int IdUsuario)
         {
             InitializeComponent();
+            this.IdUsuario = IdUsuario;
+        }
+
+        private bool VerificarUsuario()
+        {
+            if (IdnumericUpDown.Value == IdUsuario)
+                return true;
+            else
+                return false;
         }
 
         private bool Validar()
@@ -61,6 +71,11 @@ namespace ProyectoFinal.UI
             }
             catch (Exception) { }
 
+            if(VerificarUsuario())
+            {
+                paso = false;
+                MessageBox.Show("NO puede Modificar el usuario que esta en uso", "Infromación",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
 
 
             return paso;
@@ -145,6 +160,13 @@ namespace ProyectoFinal.UI
         {
             RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
             errorProvider.Clear();
+
+            if (VerificarUsuario())
+            {
+                MessageBox.Show("No puede Eliminar el usuario que esta en uso", "Infromación", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             try
             {
 

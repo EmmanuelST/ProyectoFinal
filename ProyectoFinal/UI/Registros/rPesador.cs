@@ -155,6 +155,8 @@ namespace ProyectoFinal.UI
                 errorProvider.SetError(CedulatextBox, "Esta cedula no es valida");
             }
 
+            
+
 
             return paso;
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,8 @@ namespace Entidades
         public decimal TasaInteres { get; set; }
         public DateTime HastaFecha { get; set; }
         public decimal Balance { get; set; }
+        [Browsable(false)]
+        public string Comentario { get; set; }
         public virtual List<VentaDetalles> Detalles { get; set; }
 
         public Ventas()
@@ -39,6 +42,7 @@ namespace Entidades
             TipoVeta = TiposVentas.Contado;
             TasaInteres = 0;
             HastaFecha = DateTime.Now;
+            Comentario = string.Empty;
             Detalles = new List<VentaDetalles>();
         }
 

@@ -100,6 +100,11 @@
             // 
             this.CostonumericUpDown.DecimalPlaces = 2;
             this.CostonumericUpDown.Location = new System.Drawing.Point(114, 112);
+            this.CostonumericUpDown.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.CostonumericUpDown.Name = "CostonumericUpDown";
             this.CostonumericUpDown.Size = new System.Drawing.Size(192, 20);
             this.CostonumericUpDown.TabIndex = 10;
@@ -126,6 +131,11 @@
             // 
             this.PrecionumericUpDown.DecimalPlaces = 2;
             this.PrecionumericUpDown.Location = new System.Drawing.Point(114, 145);
+            this.PrecionumericUpDown.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.PrecionumericUpDown.Name = "PrecionumericUpDown";
             this.PrecionumericUpDown.Size = new System.Drawing.Size(192, 20);
             this.PrecionumericUpDown.TabIndex = 12;
@@ -212,7 +222,6 @@
             // 
             this.UnidadMedidacomboBox.FormattingEnabled = true;
             this.UnidadMedidacomboBox.Items.AddRange(new object[] {
-            "Nada",
             "Libras",
             "Sacos",
             "Fanegas"});
