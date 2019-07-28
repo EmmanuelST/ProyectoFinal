@@ -19,6 +19,7 @@ namespace ProyectoFinal.UI.Consultas.ReportViewers
         {
             InitializeComponent();
             this.lista = listado;
+            Cargar();
         }
 
         private void Cargar()
