@@ -146,6 +146,24 @@
       <DependentUpon>VentasReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\AgricultoresReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\AgricultoresReportViewer.Designer.cs">
+      <DependentUpon>AgricultoresReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\ClientesReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\ClientesReportViewer.Designer.cs">
+      <DependentUpon>ClientesReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\PesadoresReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\PesadoresReportViewer.Designer.cs">
+      <DependentUpon>PesadoresReportViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Consultas\ReportViewers\UsuariosReportViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +181,12 @@
     </Compile>
     <Compile Include="UI\Consultas\cUsuarios.Designer.cs">
       <DependentUpon>cUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\VendedoreReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\VendedoreReportViewer.Designer.cs">
+      <DependentUpon>VendedoreReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Consultas\ReportViewers\VentasReportViewer.cs">
       <SubType>Form</SubType>
@@ -287,6 +311,15 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>VentasReport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ReportViewers\AgricultoresReportViewer.resx">
+      <DependentUpon>AgricultoresReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ReportViewers\ClientesReportViewer.resx">
+      <DependentUpon>ClientesReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ReportViewers\PesadoresReportViewer.resx">
+      <DependentUpon>PesadoresReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\ReportViewers\UsuariosReportViewer.resx">
       <DependentUpon>UsuariosReportViewer.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\cUsuarios.resx">
       <DependentUpon>cUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ReportViewers\VendedoreReportViewer.resx">
+      <DependentUpon>VendedoreReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\ReportViewers\VentasReportViewer.resx">
       <DependentUpon>VentasReportViewer.cs</DependentUpon>

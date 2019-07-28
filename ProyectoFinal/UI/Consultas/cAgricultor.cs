@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using ProyectoFinal.UI.Consultas.ReportViewers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -108,6 +109,12 @@ namespace ProyectoFinal.UI.Consultas
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             Buscar();
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            AgricultoresReportViewer viewer = new AgricultoresReportViewer(listado);
+            viewer.ShowDialog();
         }
     }
 }
