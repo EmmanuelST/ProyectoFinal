@@ -2,6 +2,8 @@
 using Entidades;
 using Entidades.View;
 using ProyectoFinal.UI.Consultas;
+using ProyectoFinal.UI.Consultas.Reporte.Facturas;
+using ProyectoFinal.UI.Consultas.ReportViewers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -501,6 +503,13 @@ namespace ProyectoFinal.UI
             }
 
             RefreshTotal();
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            Ventas venta = LlenarClase();
+            FacturaVentaViewer viewer = new FacturaVentaViewer(venta);
+            viewer.ShowDialog();
         }
     }
 }
