@@ -128,6 +128,12 @@
       <DependentUpon>ClientesResport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Consultas\Reporte\CompraReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompraReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\Consultas\Reporte\PesadoresReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +163,12 @@
     </Compile>
     <Compile Include="UI\Consultas\ReportViewers\ClientesReportViewer.Designer.cs">
       <DependentUpon>ClientesReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\ComprasReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ReportViewers\ComprasReportViewer.Designer.cs">
+      <DependentUpon>ComprasReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Consultas\ReportViewers\PesadoresReportViewer.cs">
       <SubType>Form</SubType>
@@ -299,6 +311,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ClientesResport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\Reporte\CompraReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CompraReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\Reporte\PesadoresReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PesadoresReport.cs</LastGenOutput>
@@ -316,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\ReportViewers\ClientesReportViewer.resx">
       <DependentUpon>ClientesReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ReportViewers\ComprasReportViewer.resx">
+      <DependentUpon>ComprasReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\ReportViewers\PesadoresReportViewer.resx">
       <DependentUpon>PesadoresReportViewer.cs</DependentUpon>
@@ -431,6 +450,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Consultas\Reporte\Facturas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
