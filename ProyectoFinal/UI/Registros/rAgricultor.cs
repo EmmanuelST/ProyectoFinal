@@ -134,7 +134,6 @@ namespace ProyectoFinal.UI.Registros
                 paso = false;
                 errorProvider.SetError(TelefonotextBox, "Este campo no puede estar vacio");
             }
-
             if (string.IsNullOrWhiteSpace(CelulartextBox.Text))
             {
                 paso = false;

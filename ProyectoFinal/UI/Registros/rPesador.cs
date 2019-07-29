@@ -131,11 +131,6 @@ namespace ProyectoFinal.UI
                 errorProvider.SetError(TelefonotextBox, "Este campo no puede estar vacio");
             }
 
-            if (string.IsNullOrWhiteSpace(CelulartextBox.Text))
-            {
-                paso = false;
-                errorProvider.SetError(CelulartextBox, "Este campo no puede estar vacio");
-            }
 
             if (FechaRegistrodateTimePicker.Value > DateTime.Now)
             {
