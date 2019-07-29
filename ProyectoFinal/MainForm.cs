@@ -1,4 +1,6 @@
-﻿using ProyectoFinal.UI;
+﻿using BLL;
+using Entidades;
+using ProyectoFinal.UI;
 using ProyectoFinal.UI.Consultas;
 using ProyectoFinal.UI.Registros;
 using System;
@@ -16,13 +18,77 @@ namespace ProyectoFinal
     public partial class MainForm : Form
     {
         public int IdUsuario;
+        private Usuarios Usuario;
         public MainForm(int IdUsuario)
         {
             InitializeComponent();
             this.IdUsuario = IdUsuario;
             /*Login login = new Login();
             login.ShowDialog();*/
+            BuscarUsuario();
+            Permisos();
            
+        }
+
+        
+
+        private void Permisos()
+        {
+            registrarUsuariosToolStripMenuItem.Enabled = false;
+            consultarUsuariosToolStripMenuItem.Enabled = false;
+            consultarComprasToolStripMenuItem.Enabled = false;
+            consultarVentasToolStripMenuItem.Enabled = false;
+
+            registroDeVendedoresToolStripMenuItem.Enabled = false;
+            consultarVendedoresToolStripMenuItem.Enabled = false;
+            registrarPesadoresToolStripMenuItem.Enabled = false;
+            consultarPesadoresToolStripMenuItem.Enabled = false;
+            registroDeAgricultoresToolStripMenuItem.Enabled = false;
+            consultarAgriculturesToolStripMenuItem.Enabled = false;
+            registroDeComprasToolStripMenuItem.Enabled = false;
+            entradaDeProductosToolStripMenuItem.Enabled = false;
+
+            if (Usuario.NivelUsuario.Equals("Alto"))
+            {
+                registrarUsuariosToolStripMenuItem.Enabled = true;
+                consultarUsuariosToolStripMenuItem.Enabled = true;
+                consultarComprasToolStripMenuItem.Enabled = true;
+                consultarVentasToolStripMenuItem.Enabled = true;
+                registroDeVendedoresToolStripMenuItem.Enabled = true;
+                consultarVendedoresToolStripMenuItem.Enabled = true;
+                registrarPesadoresToolStripMenuItem.Enabled = true;
+                consultarPesadoresToolStripMenuItem.Enabled = true;
+                registroDeAgricultoresToolStripMenuItem.Enabled = true;
+                consultarAgriculturesToolStripMenuItem.Enabled = true;
+                registroDeComprasToolStripMenuItem.Enabled = true;
+                entradaDeProductosToolStripMenuItem.Enabled = true;
+            }
+
+            if (Usuario.NivelUsuario.Equals("Medio"))
+            {
+                registroDeVendedoresToolStripMenuItem.Enabled = true;
+                consultarVendedoresToolStripMenuItem.Enabled = true;
+                registrarPesadoresToolStripMenuItem.Enabled = true;
+                consultarPesadoresToolStripMenuItem.Enabled = true;
+                registroDeAgricultoresToolStripMenuItem.Enabled = true;
+                consultarAgriculturesToolStripMenuItem.Enabled = true;
+                registroDeComprasToolStripMenuItem.Enabled = true;
+                entradaDeProductosToolStripMenuItem.Enabled = true;
+
+
+            }
+
+        }
+
+        private void BuscarUsuario()
+        {
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
+            try
+            {
+                Usuario = db.Buscar(IdUsuario);
+            }
+            catch (Exception) { }
         }
 
         private void limitador()
@@ -32,6 +98,7 @@ namespace ProyectoFinal
 
         private void RegistrarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             rUsuario registro = new rUsuario(IdUsuario);
             registro.MdiParent = this;
             registro.Show();

@@ -20,6 +20,7 @@ namespace ProyectoFinal.UI
         {
             InitializeComponent();
             this.IdUsuario = IdUsuario;
+            NivelcomboBox.SelectedIndex = 0;
         }
 
 
@@ -98,11 +99,7 @@ namespace ProyectoFinal.UI
             }
             catch (Exception) { }
 
-            if(VerificarUsuario())
-            {
-                paso = false;
-                MessageBox.Show("NO puede Modificar el usuario que esta en uso", "Infromación",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-            }
+            
 
 
             return paso;
