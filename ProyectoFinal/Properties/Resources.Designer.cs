@@ -253,6 +253,16 @@ namespace ProyectoFinal.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap photo50395300107083878611 {
+            get {
+                object obj = ResourceManager.GetObject("photo50395300107083878611", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap photo5039530010708387862 {
             get {
                 object obj = ResourceManager.GetObject("photo5039530010708387862", resourceCulture);
