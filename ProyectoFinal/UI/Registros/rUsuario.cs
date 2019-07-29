@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using ProyectoFinal.UI.Consultas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,37 @@ namespace ProyectoFinal.UI
         {
             InitializeComponent();
             this.IdUsuario = IdUsuario;
+        }
+
+
+        private string Seleccion(int num)
+        {
+            string seleccion = "Bajo";
+            if (num == 0)
+                seleccion = "Bajo";
+            else
+                    if (num == 1)
+                seleccion = "Medio";
+            else
+                if (num == 3)
+                seleccion = "Alto";
+
+            return seleccion;
+        }
+
+        private int SeleccionInt(string num)
+        {
+            int seleccion = 0;
+            if (num == "Bajo")
+                seleccion = 0;
+            else
+                    if (num == "Medio")
+                seleccion = 1;
+            else
+                if (num == "Alto")
+                seleccion = 2;
+
+            return seleccion;
         }
 
         private bool VerificarUsuario()
@@ -54,12 +86,7 @@ namespace ProyectoFinal.UI
                 errorProvider.SetError(NombretextBox, "Este campo no puede estar vacio");
             }
 
-            if(NivelnumericUpDown.Value == 0)
-            {
-                paso = false;
-                errorProvider.SetError(NivelnumericUpDown,"Debe fijar un nivel para el usuario");
-            }
-
+            
             try
             {
                 if(db.Repetido(U=> U.Usuario.Equals(UsuariotextBox.Text.Trim())))
@@ -120,11 +147,13 @@ namespace ProyectoFinal.UI
 
             }catch(Exception)
             {
-                throw;
-                //MessageBox.Show("Ocurrio un error", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
+                MessageBox.Show("Ocurrio un error", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
+
+        
 
         private Usuarios LlenarClase()
         {
@@ -133,9 +162,9 @@ namespace ProyectoFinal.UI
                 IdUsuario = (int)IdnumericUpDown.Value,
                 Nombre = NombretextBox.Text,
                 Usuario = UsuariotextBox.Text,
-                Clave = ClavetextBox.Text,
+                Clave = Usuarios.Encriptar(ClavetextBox.Text),
                 FechaRegistro = FechadateTimePicker.Value,
-                NivelUsuario = (int)NivelnumericUpDown.Value
+                NivelUsuario = Seleccion(NivelcomboBox.SelectedIndex) 
             };
 
             return usuario;
@@ -153,7 +182,7 @@ namespace ProyectoFinal.UI
             UsuariotextBox.Text = string.Empty;
             ClavetextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
-            NivelnumericUpDown.Value = 0;
+            NivelcomboBox.SelectedIndex = 0;
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
@@ -191,8 +220,8 @@ namespace ProyectoFinal.UI
 
             }catch(Exception)
             {
-                throw;
-                //MessageBox.Show("Ocurrio un error", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                MessageBox.Show("Ocurrio un error", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -214,8 +243,8 @@ namespace ProyectoFinal.UI
 
             }catch(Exception)
             {
-                throw;
-                //MessageBox.Show("Ocurrio un error", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                MessageBox.Show("Ocurrio un error", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -226,9 +255,11 @@ namespace ProyectoFinal.UI
             IdnumericUpDown.Value = usuario.IdUsuario;
             NombretextBox.Text = usuario.Nombre;
             UsuariotextBox.Text = usuario.Usuario;
-            ClavetextBox.Text = usuario.Clave;
+            ClavetextBox.Text = Usuarios.DesEncriptar(usuario.Clave);
             FechadateTimePicker.Value = usuario.FechaRegistro;
-            NivelnumericUpDown.Value = usuario.NivelUsuario;
+            NivelcomboBox.SelectedIndex = SeleccionInt(usuario.NivelUsuario);
         }
+
+        
     }
 }

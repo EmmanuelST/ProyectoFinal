@@ -36,6 +36,7 @@ namespace ProyectoFinal.UI.Registros
 
             if(Log_in())
             {
+                
                 List<Usuarios> usuario = db.GetList(U => U.Usuario == UsuariotextBox.Text);
                 MainForm main = new MainForm(usuario[0].IdUsuario);
                 Hide();
@@ -45,7 +46,7 @@ namespace ProyectoFinal.UI.Registros
             }
             else
             {
-                MessageBox.Show("Usuario o Contraseña incorrectos");
+                MessageBox.Show("Usuario o Contraseña incorrectos","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
 
         }
@@ -78,7 +79,8 @@ namespace ProyectoFinal.UI.Registros
             try
             {
                 RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
-                if (db.Repetido(U => U.Usuario == UsuariotextBox.Text && U.Clave == ContrasenatextBox.Text))
+                string clave = Usuarios.Encriptar(ContrasenatextBox.Text);
+                if (db.Repetido(U => U.Usuario == UsuariotextBox.Text && U.Clave == clave))
                 {
                     paso = true;
                 }
@@ -102,8 +104,8 @@ namespace ProyectoFinal.UI.Registros
                     {
                         Nombre = "Root",
                         Usuario = "Root",
-                        Clave = "Root12345",
-                        NivelUsuario = 5,
+                        Clave = Usuarios.Encriptar("Root12345"),
+                        NivelUsuario = "Alto",
                         FechaRegistro = DateTime.Now
                     });
                 }
@@ -112,5 +114,6 @@ namespace ProyectoFinal.UI.Registros
             catch (Exception) { }
 
         }
+
     }
 }

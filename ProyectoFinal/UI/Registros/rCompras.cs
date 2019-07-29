@@ -84,8 +84,8 @@ namespace ProyectoFinal.UI
 
             }catch(Exception)
             {
-                throw;
-                //MessageBox.Show("Hubo un error!!","Error!!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                
+                MessageBox.Show("Hubo un error!!","Error!!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
 
@@ -195,8 +195,8 @@ namespace ProyectoFinal.UI
 
             }catch(Exception)
             {
-                throw;
-                //MessageBox.Show("Hubo un error!!","Error!!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                
+                MessageBox.Show("Hubo un error!!","Error!!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -222,7 +222,7 @@ namespace ProyectoFinal.UI
             }
             catch (Exception)
             {
-                throw;
+                MessageBox.Show("Hubo un error!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }

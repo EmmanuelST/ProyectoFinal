@@ -76,7 +76,6 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ComentariotextBox = new System.Windows.Forms.TextBox();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdVentanumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdClientenumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdVendedornumericUpDown)).BeginInit();
@@ -501,7 +500,7 @@
             // 
             this.Eliminarbutton.Image = global::ProyectoFinal.Properties.Resources.eliminar;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(323, 532);
+            this.Eliminarbutton.Location = new System.Drawing.Point(355, 532);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 57);
             this.Eliminarbutton.TabIndex = 17;
@@ -514,7 +513,7 @@
             // 
             this.Guardarbutton.Image = global::ProyectoFinal.Properties.Resources.guardar;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(222, 532);
+            this.Guardarbutton.Location = new System.Drawing.Point(254, 532);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 56);
             this.Guardarbutton.TabIndex = 16;
@@ -527,7 +526,7 @@
             // 
             this.Nuevobutton.Image = global::ProyectoFinal.Properties.Resources.nuevo;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(123, 532);
+            this.Nuevobutton.Location = new System.Drawing.Point(155, 532);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 56);
             this.Nuevobutton.TabIndex = 15;
@@ -554,25 +553,11 @@
             this.ComentariotextBox.Size = new System.Drawing.Size(573, 51);
             this.ComentariotextBox.TabIndex = 0;
             // 
-            // Imprimirbutton
-            // 
-            this.Imprimirbutton.Image = global::ProyectoFinal.Properties.Resources.imprimir;
-            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimirbutton.Location = new System.Drawing.Point(420, 531);
-            this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(75, 57);
-            this.Imprimirbutton.TabIndex = 19;
-            this.Imprimirbutton.Text = "Imprimir";
-            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Imprimirbutton.UseVisualStyleBackColor = true;
-            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
-            // 
             // rVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 600);
-            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
@@ -648,6 +633,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox ComentariotextBox;
-        private System.Windows.Forms.Button Imprimirbutton;
     }
 }

@@ -48,9 +48,9 @@ namespace ProyectoFinal.UI.Consultas
                             listado = db.GetList(U => U.IdCompra == id);
                             break;
 
-                       /* case 2://Nombre
-                            listado = db.GetList(U => U.Nombre.Contains(CriteriotextBox.Text));
-                            break;*/
+                        case 2://Total
+                            listado = db.GetList(U => U.Total ==  decimal.Parse(CriteriotextBox.Text));
+                            break;
 
                             /*case 3:// Balance
                                 listado = db.GetList(U => U.Balance == decimal.Parse(CriteriotextBox.Text));

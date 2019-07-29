@@ -60,8 +60,8 @@ namespace ProyectoFinal.UI
 
             }catch(Exception)
             {
-                throw;
-               // MessageBox.Show("Hubo un error!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+               MessageBox.Show("Hubo un error!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -152,7 +152,7 @@ namespace ProyectoFinal.UI
             cliente.LimiteCredito = LimiteCreditonumericUpDown.Value ;
             cliente.LimiteVenta =  LimiteVentasnumericUpDown.Value;
             cliente.IdUsuario = IdUsuario;
-            //cliente.Balance =  BalancetextBox.Text;
+           
 
             return cliente;
         }
@@ -204,8 +204,8 @@ namespace ProyectoFinal.UI
             }
             catch(Exception)
             {
-                throw;
-                // MessageBox.Show("Hubo un error!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                 MessageBox.Show("Hubo un error!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -230,7 +230,8 @@ namespace ProyectoFinal.UI
 
             }catch(Exception)
             {
-                throw;
+                
+                MessageBox.Show("Hubo un error!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

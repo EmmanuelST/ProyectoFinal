@@ -470,6 +470,32 @@
   <ItemGroup>
     <None Include="Resources\imprimir.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\photo5039530010708387859.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo5039530010708387860.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo5039530010708387861.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo5039530010708387862.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_person_people_man_you_1625.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Esta es.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

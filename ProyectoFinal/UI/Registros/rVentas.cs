@@ -34,7 +34,7 @@ namespace ProyectoFinal.UI
         {
             DetalledataGridView.DataSource = null;
             DetalledataGridView.DataSource = this.DetallesView;
-            //DetalledataGridView.Refresh();
+            
         }
 
         private void RefreshTotal()
@@ -118,7 +118,10 @@ namespace ProyectoFinal.UI
 
 
             }
-            catch (Exception) { }
+            catch (Exception)
+            {
+                MessageBox.Show("Hubo un error!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             try
             {
@@ -138,7 +141,7 @@ namespace ProyectoFinal.UI
                 {
                     if(db.Modificar(venta))
                     {
-                        MessageBox.Show("Guardado correctamente", "Información!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Modificado correctamente", "Información!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
                     }
                     else
@@ -150,8 +153,8 @@ namespace ProyectoFinal.UI
 
             }catch(Exception)
             {
-                throw;
-                //MessageBox.Show("Hubo un error!!","Error!!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                
+                MessageBox.Show("Hubo un error!!","Error!!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
 
@@ -444,7 +447,8 @@ namespace ProyectoFinal.UI
                 
             }catch(Exception)
             {
-                throw;
+                
+                MessageBox.Show("Hubo un error!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -485,7 +489,7 @@ namespace ProyectoFinal.UI
 
             }catch(Exception)
             {
-                throw;
+                    MessageBox.Show("Hubo un error!!", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

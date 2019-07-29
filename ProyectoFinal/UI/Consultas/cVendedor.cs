@@ -55,9 +55,13 @@ namespace ProyectoFinal.UI.Consultas
                             listado = db.GetList(U => U.Nombre.Contains(CriteriotextBox.Text));
                             break;
 
-                        /*case 3:// Balance
-                            listado = db.GetList(U => U.Balance == decimal.Parse(CriteriotextBox.Text));
-                            break;*/
+                        case 3://FechaNacimiento
+                            listado = db.GetList(U => true);
+                            listado = listado.Where(U => U.FechaNacimiento.Date >= DesdedateTimePicker.Value.Date && U.FechaNacimiento.Date <= HastadateTimePicker.Value.Date).ToList();
+                            break;
+
+
+                            
 
                     }
 
@@ -73,7 +77,14 @@ namespace ProyectoFinal.UI.Consultas
             }
             else
             {
-                listado = db.GetList(p => true);
+                if(FiltrocomboBox.SelectedIndex == 3)
+                {
+                    listado = db.GetList(U => true);
+                    listado = listado.Where(U => U.FechaNacimiento.Date >= DesdedateTimePicker.Value.Date && U.FechaNacimiento.Date <= HastadateTimePicker.Value.Date).ToList();
+                   
+                }                    
+                else
+                    listado = db.GetList(p => true);
             }
 
             if (FechacheckBox.Checked)
@@ -106,6 +117,14 @@ namespace ProyectoFinal.UI.Consultas
 
         private void FiltrocomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (FiltrocomboBox.SelectedIndex == 3)
+            {
+                FechacheckBox.Checked = false;
+                FechacheckBox.Enabled = false;
+            }
+            else
+                FechacheckBox.Enabled = true;
+
             Buscar();
         }
 

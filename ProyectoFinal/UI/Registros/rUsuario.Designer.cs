@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rUsuario));
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,30 +42,19 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.NivelnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NivelcomboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NivelnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(85, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Registro de Usuarios";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 74);
+            this.label2.Location = new System.Drawing.Point(12, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(19, 13);
             this.label2.TabIndex = 1;
@@ -75,7 +63,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 107);
+            this.label3.Location = new System.Drawing.Point(12, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 2;
@@ -84,7 +72,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 143);
+            this.label4.Location = new System.Drawing.Point(12, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 3;
@@ -93,7 +81,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 177);
+            this.label5.Location = new System.Drawing.Point(12, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 4;
@@ -101,28 +89,28 @@
             // 
             // IdnumericUpDown
             // 
-            this.IdnumericUpDown.Location = new System.Drawing.Point(72, 71);
+            this.IdnumericUpDown.Location = new System.Drawing.Point(72, 17);
             this.IdnumericUpDown.Name = "IdnumericUpDown";
-            this.IdnumericUpDown.Size = new System.Drawing.Size(133, 20);
+            this.IdnumericUpDown.Size = new System.Drawing.Size(176, 20);
             this.IdnumericUpDown.TabIndex = 5;
             // 
             // NombretextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(72, 104);
+            this.NombretextBox.Location = new System.Drawing.Point(72, 50);
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(257, 20);
             this.NombretextBox.TabIndex = 6;
             // 
             // UsuariotextBox
             // 
-            this.UsuariotextBox.Location = new System.Drawing.Point(72, 140);
+            this.UsuariotextBox.Location = new System.Drawing.Point(72, 86);
             this.UsuariotextBox.Name = "UsuariotextBox";
             this.UsuariotextBox.Size = new System.Drawing.Size(257, 20);
             this.UsuariotextBox.TabIndex = 7;
             // 
             // ClavetextBox
             // 
-            this.ClavetextBox.Location = new System.Drawing.Point(72, 174);
+            this.ClavetextBox.Location = new System.Drawing.Point(72, 120);
             this.ClavetextBox.Name = "ClavetextBox";
             this.ClavetextBox.Size = new System.Drawing.Size(257, 20);
             this.ClavetextBox.TabIndex = 8;
@@ -131,7 +119,7 @@
             // 
             this.Buscarbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(254, 68);
+            this.Buscarbutton.Location = new System.Drawing.Point(254, 15);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
             this.Buscarbutton.TabIndex = 9;
@@ -144,7 +132,7 @@
             // 
             this.Nuevobutton.Image = global::ProyectoFinal.Properties.Resources.nuevo;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(47, 284);
+            this.Nuevobutton.Location = new System.Drawing.Point(47, 230);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 56);
             this.Nuevobutton.TabIndex = 10;
@@ -157,7 +145,7 @@
             // 
             this.Guardarbutton.Image = global::ProyectoFinal.Properties.Resources.guardar;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(142, 284);
+            this.Guardarbutton.Location = new System.Drawing.Point(142, 230);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 56);
             this.Guardarbutton.TabIndex = 11;
@@ -170,7 +158,7 @@
             // 
             this.Eliminarbutton.Image = global::ProyectoFinal.Properties.Resources.eliminar;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(240, 284);
+            this.Eliminarbutton.Location = new System.Drawing.Point(240, 230);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 57);
             this.Eliminarbutton.TabIndex = 12;
@@ -179,17 +167,10 @@
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
-            // NivelnumericUpDown
-            // 
-            this.NivelnumericUpDown.Location = new System.Drawing.Point(119, 237);
-            this.NivelnumericUpDown.Name = "NivelnumericUpDown";
-            this.NivelnumericUpDown.Size = new System.Drawing.Size(210, 20);
-            this.NivelnumericUpDown.TabIndex = 14;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 237);
+            this.label6.Location = new System.Drawing.Point(12, 183);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 13);
             this.label6.TabIndex = 13;
@@ -198,7 +179,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 206);
+            this.label7.Location = new System.Drawing.Point(12, 152);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 13);
             this.label7.TabIndex = 15;
@@ -208,7 +189,7 @@
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(119, 205);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(119, 151);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(210, 20);
             this.FechadateTimePicker.TabIndex = 16;
@@ -218,14 +199,27 @@
             this.errorProvider.ContainerControl = this;
             this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
             // 
+            // NivelcomboBox
+            // 
+            this.NivelcomboBox.FormattingEnabled = true;
+            this.NivelcomboBox.Items.AddRange(new object[] {
+            "Bajo",
+            "Medio",
+            "Alto"});
+            this.NivelcomboBox.Location = new System.Drawing.Point(119, 180);
+            this.NivelcomboBox.Name = "NivelcomboBox";
+            this.NivelcomboBox.Size = new System.Drawing.Size(210, 21);
+            this.NivelcomboBox.TabIndex = 17;
+           
+            // 
             // rUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 349);
+            this.ClientSize = new System.Drawing.Size(362, 302);
+            this.Controls.Add(this.NivelcomboBox);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.NivelnumericUpDown);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
@@ -239,12 +233,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rUsuario";
             this.Text = "Registro de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NivelnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,8 +244,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -266,10 +256,10 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
-        private System.Windows.Forms.NumericUpDown NivelnumericUpDown;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.ComboBox NivelcomboBox;
     }
 }

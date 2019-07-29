@@ -44,10 +44,7 @@ namespace ProyectoFinal
             consulta.Show();
         }
 
-        private void RegistrosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void RegistrarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {

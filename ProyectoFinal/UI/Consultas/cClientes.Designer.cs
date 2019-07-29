@@ -31,7 +31,6 @@
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
@@ -41,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             this.FechacheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -85,16 +85,6 @@
             this.groupBox2.TabIndex = 56;
             this.groupBox2.TabStop = false;
             // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
-            this.Buscarbutton.Location = new System.Drawing.Point(426, 28);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(46, 23);
-            this.Buscarbutton.TabIndex = 44;
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click_1);
-            // 
             // CriteriotextBox
             // 
             this.CriteriotextBox.Location = new System.Drawing.Point(212, 30);
@@ -118,7 +108,9 @@
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "Todo",
             "Id",
-            "Nombre"});
+            "Nombre",
+            "Balance",
+            "Fecha de Nacimiento"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(7, 30);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(193, 21);
@@ -185,6 +177,16 @@
             this.HastadateTimePicker.TabIndex = 14;
             this.HastadateTimePicker.ValueChanged += new System.EventHandler(this.HastadateTimePicker_ValueChanged);
             // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Image = global::ProyectoFinal.Properties.Resources.buscaTyni;
+            this.Buscarbutton.Location = new System.Drawing.Point(426, 28);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(46, 23);
+            this.Buscarbutton.TabIndex = 44;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click_1);
+            // 
             // FechacheckBox
             // 
             this.FechacheckBox.AutoSize = true;
@@ -220,7 +222,6 @@
         private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.DataGridView ConsultadataGridView;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox FiltrocomboBox;
@@ -230,6 +231,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
+        private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.CheckBox FechacheckBox;
     }
 }
